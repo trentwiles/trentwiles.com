@@ -4,13 +4,7 @@ pageTitle: My Projects
 description: Various personal and class projects I've created over the years.
 ---
 
-<hr>
-
 <section id="section-1">
-    <header>
-        <h2>Current Projects</h2>
-        <p>Projects that I currently update and maintain.</p>
-    </header>
     <aside>
         <h3>Trace TL;DR <br> (<a href="https://github.com/trentwiles/tracetldr">Github</a> | <a href="https://trace.trentwiles.com">Live Demo</a>)</h3>
         <p> Summarizes Northeastern's TRACE professor evaluations, using MongoDB and Google's Gemini AI.</p>

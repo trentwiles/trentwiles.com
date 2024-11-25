@@ -4,8 +4,12 @@ pageTitle: Travel
 description: Travel Highlights
 ---
 
-{% for post in collections.travel %}
-    <h2><a href="{{ post.url }}">{{ post.data.pageTitle }}</a></h2>
-    <p>{{ post.data.description }}</p>
-    <em>{{ post.date | date: "%Y-%m-%d" }}</em>
-{% endfor %}
+<section id="posts">
+    {% for post in collections.travel %}
+        <aside>
+            <h3><a href="{{ post.url }}">{{ post.data.pageTitle }}</a></h3>
+            <p>{{ post.data.description }}</p>
+            <sup>{{ post.date | date: "%Y-%m-%d" }}</sup>
+        </aside>
+    {% endfor %}
+</section>
