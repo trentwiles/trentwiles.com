@@ -3,8 +3,13 @@ pageTitle: Dine on Campus API Documentation
 description: Guide on using the internal dineoncampus.com API, for Northeastern University.
 ---
 
+<!--
+CENTER THIS BECAUSE IT LOOKS SOMEWHAT BAD
 
-Base: [https://api.dineoncampus.com](api.dineoncampus.com)
+Not sure if there is a way to do this, <section> tag failed
+-->
+
+Base: [api.dineoncampus.com](https://api.dineoncampus.com)
 
 ## Location IDs
 
