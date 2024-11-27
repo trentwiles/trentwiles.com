@@ -1,7 +1,7 @@
 ---
 layout: page.liquid
 pageTitle: Travel
-description: Travel Highlights
+description: Travel Highlights (to be updated soon!)
 ---
 
 <section id="posts">
