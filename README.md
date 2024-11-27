@@ -24,3 +24,16 @@ echo 'GITHUB_API="..."' > .env
 git pull
 npx @11ty/eleventy # outputs to _site
 ```
+
+## Giving Caddy Server Permission
+
+```
+sudo groupadd webadmins
+
+sudo usermod -a -G webadmins [YOUR_USERNAME]
+sudo usermod -a -G webadmins caddy
+
+
+sudo chown -R trent:webadmins /home/trent/trentwiles.com
+sudo find /home/trent/trentwiles.com -type d -exec chmod 775 {} \;
+```
