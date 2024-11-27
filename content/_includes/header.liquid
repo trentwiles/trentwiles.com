@@ -45,9 +45,22 @@ function getFormattedDate(buildTime) {
   return `${month.toString().padStart(2, '0')}/${day.toString().padStart(2, '0')}/${year} ${hours}:${minutes.toString().padStart(2, '0')}${isPM ? 'PM' : 'AM'}`;
 }
 
+
+
 window.onload = function() {
     const og = document.getElementById("footerText").innerHTML
 
     document.getElementById("footerText").innerHTML = og + getFormattedDate({{ buildTimestamp }})
+
+    const atag = document.getElementById("commitHash")
+    const cHash = atag.innerHTML
+
+    atag.addEventListener("mouseover", () => {
+        atag.innerHTML = `"{{ commitName }}"`
+    })
+
+    atag.addEventListener("mouseout", () => {
+        atag.innerHTML = cHash
+    })
 }
 </script>
