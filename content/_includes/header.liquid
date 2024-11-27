@@ -56,7 +56,7 @@ window.onload = function() {
     const cHash = atag.innerHTML
 
     atag.addEventListener("mouseover", () => {
-        atag.innerHTML = `"{{ commitName | raw }}"`
+        atag.innerHTML = `"{{ commitName | escape }}"`
     })
 
     atag.addEventListener("mouseout", () => {
