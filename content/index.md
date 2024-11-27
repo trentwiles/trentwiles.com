@@ -1,6 +1,6 @@
 ---
 layout: page.liquid
-pageTitle: Trent Wiles
+pageTitle: Home
 description: "I’m Trent Wiles, a computer science student studying at Northeastern University. I program, cycle, and travel the world from time to time.
 
 <section>
