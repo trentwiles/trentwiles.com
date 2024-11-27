@@ -25,3 +25,29 @@
     <h1>{{ pageTitle }}</h1>
     <p>{{ description }}</p>
 </header>
+<script>
+// formats the build date (which is a global var) into a formatted, time-zone respecting one
+function getFormattedDate(buildTime) {
+  const now = new Date(buildTime);
+
+  // +1 because 0 = january, 1 = february, etc.
+  const month = now.getMonth() + 1;
+  const day = now.getDate();
+  const year = now.getFullYear();
+
+  let hours = now.getHours();
+  const minutes = now.getMinutes();
+  const isPM = hours >= 12;
+
+  // i hate miltiary time
+  hours = hours % 12 || 12;
+
+  return `${month.toString().padStart(2, '0')}/${day.toString().padStart(2, '0')}/${year} ${hours}:${minutes.toString().padStart(2, '0')}${isPM ? 'PM' : 'AM'}`;
+}
+
+window.onload = function() {
+    const og = document.getElementById("footerText").innerHTML
+
+    document.getElementById("footerText").innerHTML = og + getFormattedDate({{ buildTimestamp }})
+}
+</script>
