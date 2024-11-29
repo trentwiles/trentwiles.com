@@ -64,4 +64,7 @@ description: Various personal and class projects I've created over the years.
         <p>Track reports of fraud on Discord accounts. (2020)</p>
         <p><sup>PHP</sup> <sup>MySQL</sup> <sup>Apache Web Server</sup></p>
     </aside>
+    <a href="https://www.abuseipdb.com/user/47625" title="AbuseIPDB is an IP address blacklist for webmasters and sysadmins to report IP addresses engaging in abusive behavior on their networks">
+	    <img src="https://www.abuseipdb.com/contributor/47625.svg" alt="AbuseIPDB Contributor Badge" style="width: 401px;">
+    </a>
 </section>
