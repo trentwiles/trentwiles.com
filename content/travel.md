@@ -5,7 +5,7 @@ description: Travel Highlights (to be updated soon!)
 ---
 
 <section id="posts">
-    {% for post in collections.travel | reverse %}
+    {% for post in collections.travel | sortByDateDesc %}
         <aside>
             <h3><a href="{{ post.url }}">{{ post.data.pageTitle }}</a></h3>
             <p>{{ post.data.description }}</p>

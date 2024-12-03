@@ -51,6 +51,10 @@ module.exports = async function (eleventyConfig) {
   eleventyConfig.addGlobalData("commitName", await pullLastComMessage())
   eleventyConfig.addGlobalData("buildTimestamp", Math.floor(Date.now()));
   eleventyConfig.addGlobalData("starCount", await pullStars())
+  // fix sorting error in "blog" sections
+  eleventyConfig.addFilter("sortByDateDesc", (items) => {
+      return items.slice().sort((a, b) => b.date - a.date);
+  });
   return {
     dir: {
       input: "content", // markdown / liquid path
