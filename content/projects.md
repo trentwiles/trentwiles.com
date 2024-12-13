@@ -31,7 +31,7 @@ description: Various personal and class projects I've created over the years.
         <p><sup>Caddy Server</sup> <sup>Beautiful Soup</sup><sup>Python</sup></p>
     </aside>
     <aside>
-        <h3>Notion Automated Export <br> (<a href="https://github.com/trentwiles/BARTAPI">Github</a> | <a href="https://bart.trentwil.es/"> Live Demo</a> )</h3></h3>
+        <h3>Notion Automated Export <br> (<a href="https://github.com/trentwiles/NotionAutoExport">Github</a> | <a href="https://youtu.be/pp7c7q78A3g"> Video Demo</a> )</h3></h3>
         <p>Simple CLI script to export a Notion page as static HTML and unzip the contents into a directory. Built by reverse engineering Notion’s Internal API, as the official Notion API has no such option.</p>
         <p><sup>Python</sup></p>
     </aside>
