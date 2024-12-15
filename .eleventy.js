@@ -7,6 +7,21 @@ dotenv.config()
 
 const GLOBAL_USER_AGENT = "11ty/trentwiles.com (+https://www.trentwiles.com)"
 
+// city -> country flag
+const LOCATION_MAP = {
+  "london": `<img class="flag flag-gb" src="/img/blank.gif">`,
+  "mumbai":`<img class="flag flag-in" src="/img/blank.gif">`,
+  "new york": `<img class="flag flag-us" src="/img/blank.gif">`,
+  "sydney": `<img class="flag flag-au" src="/img/blank.gif">`,
+  "frankfurt": `<img class="flag flag-de" src="/img/blank.gif">`,
+  "sao paulo": `<img class="flag flag-br" src="/img/blank.gif">`,
+  "singapore": `<img class="flag flag-sg" src="/img/blank.gif">`,
+  "amsterdam": `<img class="flag flag-nl" src="/img/blank.gif">`,
+  "tokyo": `<img class="flag flag-jp" src="/img/blank.gif">`,
+  "san fransisco": `<img class="flag flag-us" src="/img/blank.gif">`,
+  "warsaw": `<img class="flag flag-pl" src="/img/blank.gif">`,
+}
+
 function helperMakeLinkHTML() {
   const fullHash = execSync('git rev-parse HEAD').toString().trim()
   return `<a href="https://github.com/trentwiles/trentwiles.com/commit/${fullHash}" target="_blank" id="commitHash">${fullHash.substring(0,5)}</a>`
@@ -107,13 +122,22 @@ async function pullVerboseUptimeStatus() {
   await hetrix.get("/v3/uptime-monitors")
     .then(function (response) {
       response.data["monitors"].forEach(element => {
+        // Status From Each Monitor
+        var cityText = ""
+        for (const [city, data] of Object.entries(element["locations"])) {
+          cityText += `${LOCATION_MAP[city]} ${city.toUpperCase()} - ${data["response_time"]}ms<br>`
+        }
+
+        // Status Text
         var statusHTML = ""
         if (element["uptime_status"] == "up") {
           statusHTML = `<span style="color: green;">Online</span>`
         }else {
           statusHTML = `<span style="color: red;">Offline</span>`
         }
-        table += `<tr><td>${element["name"]}</td><td>${element["resolve_address_info"]["Region"]}, ${element["resolve_address_info"]["Country"]} <a href="https://radar.cloudflare.com/${element["resolve_address_info"]["ASN"]}" _target="blank">(${element["resolve_address_info"]["ASN"]})</a></td><td>${statusHTML}</td></tr>`
+
+        // Table Itself
+        table += `<tr><td>${element["name"]}</td><td>${element["resolve_address_info"]["Region"]}, ${element["resolve_address_info"]["Country"]} <a href="https://radar.cloudflare.com/${element["resolve_address_info"]["ASN"]}" _target="blank">(${element["resolve_address_info"]["ASN"]})</a></td><td>${statusHTML} <br><br> ${cityText}</td></tr>`
       });
     })
     .catch(function (error) {
