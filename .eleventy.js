@@ -9,17 +9,17 @@ const GLOBAL_USER_AGENT = "11ty/trentwiles.com (+https://www.trentwiles.com)"
 
 // city -> country flag
 const LOCATION_MAP = {
-  "london": `<img class="flag flag-gb" src="/img/blank.gif">`,
-  "mumbai":`<img class="flag flag-in" src="/img/blank.gif">`,
-  "new york": `<img class="flag flag-us" src="/img/blank.gif">`,
-  "sydney": `<img class="flag flag-au" src="/img/blank.gif">`,
-  "frankfurt": `<img class="flag flag-de" src="/img/blank.gif">`,
-  "sao paulo": `<img class="flag flag-br" src="/img/blank.gif">`,
-  "singapore": `<img class="flag flag-sg" src="/img/blank.gif">`,
-  "amsterdam": `<img class="flag flag-nl" src="/img/blank.gif">`,
-  "tokyo": `<img class="flag flag-jp" src="/img/blank.gif">`,
-  "san fransisco": `<img class="flag flag-us" src="/img/blank.gif">`,
-  "warsaw": `<img class="flag flag-pl" src="/img/blank.gif">`,
+  "london": `<img class="flag flag-gb" src="https://trentwil.es/a/blank.gif">`,
+  "mumbai":`<img class="flag flag-in" src="https://trentwil.es/a/blank.gif">`,
+  "new_york": `<img class="flag flag-us" src="https://trentwil.es/a/blank.gif">`,
+  "sydney": `<img class="flag flag-au" src="https://trentwil.es/a/blank.gif">`,
+  "frankfurt": `<img class="flag flag-de" src="https://trentwil.es/a/blank.gif">`,
+  "sao_paulo": `<img class="flag flag-br" src="https://trentwil.es/a/blank.gif">`,
+  "singapore": `<img class="flag flag-sg" src="https://trentwil.es/a/blank.gif">`,
+  "amsterdam": `<img class="flag flag-nl" src="https://trentwil.es/a/blank.gif">`,
+  "tokyo": `<img class="flag flag-jp" src="https://trentwil.es/a/blank.gif">`,
+  "san_fransisco": `<img class="flag flag-us" src="https://trentwil.es/a/blank.gif">`,
+  "warsaw": `<img class="flag flag-pl" src="https://trentwil.es/a/blank.gif">`,
 }
 
 function helperMakeLinkHTML() {
