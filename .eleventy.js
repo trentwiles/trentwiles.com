@@ -118,6 +118,9 @@ async function pullVerboseUptimeStatus() {
     .city-info img {
       vertical-align: middle;
     }
+    .all-city {
+      text-align: justify;
+    }
   </style>
   <section>
     <table>
@@ -135,10 +138,11 @@ async function pullVerboseUptimeStatus() {
     .then(function (response) {
       response.data["monitors"].forEach(element => {
         // Status From Each Monitor
-        var cityText = ""
+        var cityText = `<div class="all-city">`
         for (const [city, data] of Object.entries(element["locations"])) {
-          cityText += `<div class="city-info"><p>${LOCATION_MAP[city]} ${formatCityName(city)} - ${data["response_time"]}ms</p></div><br>`
+          cityText += `<div class="city-info"><p>${LOCATION_MAP[city]} ${formatCityName(city)} - ${data["response_time"]}ms</p></div>`
         }
+        cityText += `</div>`
 
         // Status Text
         var statusHTML = ""
