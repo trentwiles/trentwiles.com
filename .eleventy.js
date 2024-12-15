@@ -120,7 +120,7 @@ async function pullVerboseUptimeStatus() {
           <tr>
             <th>Service</th>
             <th>Server Location</th>
-            <th><span style="margin-right: 90px;"></span>Status Per City/Country<span style="margin-right: 90px;"></span></th>
+            <th><span style="margin-right: 150px;"></span>Status Per City/Country<span style="margin-right: 150px;"></span></th>
           </tr>
         </thead>
         <tbody>
