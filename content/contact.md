@@ -24,6 +24,10 @@ description:
             <td><a href="https://www.linkedin.com/in/trentwiles/">LinkedIn</a></td>
             <td>Send me a connection to gain access</td>
           </tr>
+          <tr>
+            <td><a href="https://www.instagram.com/legitreallytrentwiles/">Instagram</a></td>
+            <td>Only if you know me 😉</td>
+          </tr>
           <tbody>
         </tbody>
         </table>
