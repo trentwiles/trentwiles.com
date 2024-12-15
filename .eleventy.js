@@ -5,6 +5,8 @@ const { eventNames } = require('process');
 
 dotenv.config()
 
+const GLOBAL_USER_AGENT = "11ty/trentwiles.com (+https://www.trentwiles.com)"
+
 function helperMakeLinkHTML() {
   const fullHash = execSync('git rev-parse HEAD').toString().trim()
   return `<a href="https://github.com/trentwiles/trentwiles.com/commit/${fullHash}" target="_blank" id="commitHash">${fullHash.substring(0,5)}</a>`
@@ -14,7 +16,7 @@ async function pullStars() {
   const githubAPI = axios.create({
     baseURL: 'https://api.github.com',
     timeout: 1000,
-    headers: {'Authorization': 'Bearer ' + process.env.GITHUB_API, "User-agent": "trentwiles.com build"}
+    headers: {'Authorization': 'Bearer ' + process.env.GITHUB_API, "User-agent": GLOBAL_USER_AGENT}
   });
   var stars = -1;
   await githubAPI.get("/repos/trentwiles/trentwiles.com")
@@ -32,7 +34,7 @@ async function pullLastComMessage() {
   const githubAPI = axios.create({
     baseURL: 'https://api.github.com',
     timeout: 1000,
-    headers: {'Authorization': 'Bearer ' + process.env.GITHUB_API, "User-agent": "trentwiles.com build"}
+    headers: {'Authorization': 'Bearer ' + process.env.GITHUB_API, "User-agent": GLOBAL_USER_AGENT}
   });
   var msg = "unable to connect to github API";
   await githubAPI.get("/repos/trentwiles/trentwiles.com/commits/" + execSync('git rev-parse HEAD').toString().trim())
@@ -50,7 +52,7 @@ async function pullUptimeStatus() {
   const hetrix = axios.create({
     baseURL: 'https://api.hetrixtools.com',
     timeout: 3000,
-    headers: {'Authorization': 'Bearer ' + process.env.HETRIX_API}
+    headers: {Authorization: 'Bearer ' + process.env.HETRIX_API, "User-agent": GLOBAL_USER_AGENT}
   })
 
   var msg = ""
@@ -66,7 +68,7 @@ async function pullUptimeStatus() {
       });
     })
     .catch(function (error) {
-      var msg = "Unable to connect to Hetrix Uptime API"
+      msg = "Unable to connect to Hetrix Uptime API"
       console.log(error)
     })
 
