@@ -147,9 +147,9 @@ async function pullVerboseUptimeStatus() {
         // Status Text
         var statusHTML = ""
         if (element["uptime_status"] == "up") {
-          statusHTML = `<strong><span style="color: green;">Online</span></strong> <br> <hr>`
+          statusHTML = `<strong><span style="color: green;font-size: 1.5em;">Online</span></strong>`
         }else {
-          statusHTML = `<strong><span style="color: red;">Offline</span></strong> <br> <hr>`
+          statusHTML = `<strong><span style="color: red;font-size: 1.5em;">Offline</span></strong>`
         }
 
         // Table Itself
