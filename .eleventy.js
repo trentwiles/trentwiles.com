@@ -120,6 +120,8 @@ async function pullVerboseUptimeStatus() {
     }
     .all-city {
       text-align: justify;
+      padding-left: 10vw;
+      padding-right: 10vw;
     }
   </style>
   <section>
@@ -147,9 +149,9 @@ async function pullVerboseUptimeStatus() {
         // Status Text
         var statusHTML = ""
         if (element["uptime_status"] == "up") {
-          statusHTML = `<strong><span style="color: green;font-size: 1.5em;">Online</span></strong>`
+          statusHTML = `<strong><span style="color: green;font-size: 1.0em;">Online</span></strong>`
         }else {
-          statusHTML = `<strong><span style="color: red;font-size: 1.5em;">Offline</span></strong>`
+          statusHTML = `<strong><span style="color: red;font-size: 1.0em;">Offline</span></strong>`
         }
 
         // Table Itself
