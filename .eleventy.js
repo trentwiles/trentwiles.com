@@ -107,13 +107,7 @@ async function pullVerboseUptimeStatus() {
   await hetrix.get("/v3/uptime-monitors")
     .then(function (response) {
       response.data["monitors"].forEach(element => {
-        table += `
-        <tr>
-            <td>${element["name"]}></td>
-            <td>${element["resolve_address_info"]["Region"]}, ${element["resolve_address_info"]["Country"]} <a href="https://radar.cloudflare.com/${element["resolve_address_info"]["ASN"]}" _target="blank">(${element["resolve_address_info"]["ASN"]})</a></td>
-            <td></td>
-          </tr>
-        `
+        table += `<tr><td>${element["name"]}></td><td>${element["resolve_address_info"]["Region"]}, ${element["resolve_address_info"]["Country"]} <a href="https://radar.cloudflare.com/${element["resolve_address_info"]["ASN"]}" _target="blank">(${element["resolve_address_info"]["ASN"]})</a></td><td></td></tr>`
       });
     })
     .catch(function (error) {
