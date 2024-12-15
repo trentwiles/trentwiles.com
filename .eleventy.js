@@ -59,6 +59,7 @@ async function pullUptimeStatus() {
   await hetrix.get("/v3/uptime-monitors/")
     .then(function (response) {
       response.data["monitors"].forEach(element => {
+        console.log(element["uptime_status"])
         if (element["uptime_status"] != "up") {
           withErrors++
         }
