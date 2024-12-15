@@ -58,7 +58,7 @@ async function pullUptimeStatus() {
   var msg = ""
   var withErrors = 0
 
-  await hetrix.get("/v3/uptime-monitors/")
+  await hetrix.get("/v3/uptime-monitors")
     .then(function (response) {
       response.data["monitors"].forEach(element => {
         console.log(element["uptime_status"])
