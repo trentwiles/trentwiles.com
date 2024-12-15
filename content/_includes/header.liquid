@@ -79,11 +79,19 @@ window.onload = function() {
 // style for the flags library
 // keeps the <img> and <p> element on the same line, when wrapped with a certain dev
 
-.city-info img,
-.city-info p {
-  display: inline-block;
-  vertical-align: middle; /* Align the elements in the middle */
-  margin: 0;
+.city-info {
+  display: flex;          /* Use flexbox to align items in a row */
+  align-items: center;    /* Vertically center the items */
 }
 
+.city-info p {
+  margin: 0;              /* Remove the margin */
+  padding: 0;             /* Ensure no padding */
+}
+
+.city-info img {
+  margin-right: 8px;      /* Optional space between the image and text */
+  width: 20px;            /* Adjust image size */
+  height: auto;
+}
 </style>
