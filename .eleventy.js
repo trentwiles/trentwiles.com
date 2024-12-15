@@ -114,6 +114,11 @@ async function pullVerboseUptimeStatus() {
   })
 
   var table = `
+  <style>
+    .city-info img {
+      vertical-align: middle;
+    }
+  </style>
   <section>
     <table>
         <thead>
