@@ -95,10 +95,10 @@ async function pullUptimeStatus() {
     })
 
   if (withErrors > 0) {
-    return `<span style="color: red;">${withErrors} Service(s) Are Offline</span>`
+    return `<a href="/service-status/"><span style="color: red;">${withErrors} Service(s) Are Offline</span></a>`
   }else {
     if (msg == "") {
-      return `<span style="color: green;">All Services Online</span>`
+      return `<a href="/service-status/"><span style="color: green;">All Services Online</span></a>`
     } else {
       return `<code>Unable to Connect to Hetrix API</code>`
     }
@@ -155,7 +155,7 @@ async function pullVerboseUptimeStatus() {
         }
 
         // Table Itself
-        table += `<tr><td>${element["name"]}</td><td>${element["resolve_address_info"]["Region"]}, ${element["resolve_address_info"]["Country"]} <a href="https://radar.cloudflare.com/${element["resolve_address_info"]["ASN"]}" _target="blank">(${element["resolve_address_info"]["ASN"]})</a></td><td>${statusHTML} <br><br> ${cityText}</td></tr>`
+        table += `<tr><td>${element["name"]}</td><td>${element["resolve_address_info"]["Region"]}, ${element["resolve_address_info"]["Country"]} <a href="https://radar.cloudflare.com/${element["resolve_address_info"]["ASN"]}" target="_blank">(${element["resolve_address_info"]["ASN"]})</a></td><td>${statusHTML} <br><br> ${cityText}</td></tr>`
       });
     })
     .catch(function (error) {
