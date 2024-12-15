@@ -80,19 +80,19 @@ window.onload = function() {
 // keeps the <img> and <p> element on the same line, when wrapped with a certain dev
 
 .city-info {
-  display: flex;            /* Use flexbox to align items in a row */
-  align-items: center;      /* Vertically center the items */
+  display: flex;         /* Use flexbox for inline alignment */
+  align-items: center;   /* Vertically align flag and text */
+  width: 300px;          /* Force the container to be wider */
 }
 
 .city-info img {
-  margin-right: 8px;        /* Optional: small space between the image and the text */
-  width: 20px;              /* Adjust image size */
+  margin-right: 8px;     /* Optional: space between flag and text */
+  width: 30px;           /* Adjust flag size */
   height: auto;
 }
 
 .city-info p {
-  margin: 0;                /* Remove the margin */
-  padding: 0;               /* Ensure no padding */
+  margin: 0;             /* Remove the default margin from p */
 }
 
 </style>
