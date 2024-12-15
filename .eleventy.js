@@ -46,11 +46,46 @@ async function pullLastComMessage() {
   return msg
 }
 
+async function pullUptimeStatus() {
+  const hetrix = axios.create({
+    baseURL: 'https://api.hetrixtools.com',
+    timeout: 3000,
+    headers: {'Authorization': 'Bearer ' + process.env.HETRIX_API}
+  })
+
+  var msg = ""
+  var withErrors = 0
+
+  await githubAPI.get("/v3/uptime-monitors/")
+    .then(function (response) {
+      response.data["monitors"].forEach(element => {
+        if (element["uptime_status"] != "up") {
+          withErrors++
+        }
+      });
+    })
+    .catch(function (error) {
+      var msg = "Unable to connect to Hetrix Uptime API"
+      console.log(error)
+    })
+
+  if (withErrors > 0) {
+    return `<span style="color: red;">${withErrors} Service(s) Are Offline</span>`
+  }else {
+    if (msg == "") {
+      return `<span style="color: green;">All Services Online</span>`
+    } else {
+      return `<code>Unable to Connect to Hetrix API</code>`
+    }
+  }
+}
+
 module.exports = async function (eleventyConfig) {
   eleventyConfig.addGlobalData("commit", helperMakeLinkHTML());
   eleventyConfig.addGlobalData("commitName", await pullLastComMessage())
   eleventyConfig.addGlobalData("buildTimestamp", Math.floor(Date.now()));
   eleventyConfig.addGlobalData("starCount", await pullStars())
+  eleventyConfig.addGlobalData("uptime", await pullUptimeStatus())
   // fix sorting error in "blog" sections
   eleventyConfig.addFilter("sortByDateDesc", (items) => {
       return items.slice().sort((a, b) => b.date - a.date);
