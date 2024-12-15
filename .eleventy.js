@@ -22,6 +22,13 @@ const LOCATION_MAP = {
   "warsaw": `<img class="flag flag-pl" src="https://trentwil.es/a/blank.gif">`,
 }
 
+function formatCityName(city) {
+  return city
+    .replace(/_/g, " ")      
+    .toLowerCase()
+    .replace(/\b\w/g, char => char.toUpperCase());
+}
+
 function helperMakeLinkHTML() {
   const fullHash = execSync('git rev-parse HEAD').toString().trim()
   return `<a href="https://github.com/trentwiles/trentwiles.com/commit/${fullHash}" target="_blank" id="commitHash">${fullHash.substring(0,5)}</a>`
@@ -125,15 +132,15 @@ async function pullVerboseUptimeStatus() {
         // Status From Each Monitor
         var cityText = ""
         for (const [city, data] of Object.entries(element["locations"])) {
-          cityText += `${LOCATION_MAP[city]} ${city.toUpperCase()} - ${data["response_time"]}ms<br>`
+          cityText += `${LOCATION_MAP[city]}<p>${formatCityName(city)} - ${data["response_time"]}ms</p><br>`
         }
 
         // Status Text
         var statusHTML = ""
         if (element["uptime_status"] == "up") {
-          statusHTML = `<span style="color: green;">Online</span>`
+          statusHTML = `<strong><span style="color: green;">Online</span></strong>`
         }else {
-          statusHTML = `<span style="color: red;">Offline</span>`
+          statusHTML = `<strong><span style="color: red;">Offline</span></strong>`
         }
 
         // Table Itself
