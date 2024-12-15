@@ -83,12 +83,60 @@ async function pullUptimeStatus() {
   }
 }
 
+async function pullVerboseUptimeStatus() {
+  // creates a table to display on the status page
+  const hetrix = axios.create({
+    baseURL: 'https://api.hetrixtools.com',
+    timeout: 3000,
+    headers: {Authorization: 'Bearer ' + process.env.HETRIX_API, "User-agent": GLOBAL_USER_AGENT}
+  })
+
+  var table = `
+  <section>
+    <table>
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Server Location</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+  `
+
+  await hetrix.get("/v3/uptime-monitors")
+    .then(function (response) {
+      response.data["monitors"].forEach(element => {
+        table += `
+        <tr>
+            <td>${element["name"]}></td>
+            <td>${element["resolve_address_info"]["Region"]}, ${element["resolve_address_info"]["Country"]} <a href="https://radar.cloudflare.com/${element["resolve_address_info"]["ASN"]}" _target="blank">(${element["resolve_address_info"]["ASN"]})</a></td>
+            <td></td>
+          </tr>
+        `
+      });
+    })
+    .catch(function (error) {
+      table += "<code>Unable to connect to Hetrix Uptime API</code>"
+      console.log(error)
+    })
+
+    table += `
+          </tbody>
+        </table>
+    </section>
+    `
+
+    return table
+}
+
 module.exports = async function (eleventyConfig) {
   eleventyConfig.addGlobalData("commit", helperMakeLinkHTML());
   eleventyConfig.addGlobalData("commitName", await pullLastComMessage())
   eleventyConfig.addGlobalData("buildTimestamp", Math.floor(Date.now()));
   eleventyConfig.addGlobalData("starCount", await pullStars())
   eleventyConfig.addGlobalData("uptime", await pullUptimeStatus())
+  eleventyConfig.addGlobalData("uptimeTable", await pullVerboseUptimeStatus())
   // fix sorting error in "blog" sections
   eleventyConfig.addFilter("sortByDateDesc", (items) => {
       return items.slice().sort((a, b) => b.date - a.date);
