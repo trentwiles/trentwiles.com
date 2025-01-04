@@ -22,7 +22,7 @@ description: Various personal and class projects I've created over the years.
     </aside>
     <aside>
         <h3>Shore Line East API <br> (<a href="https://github.com/trentwiles/shorelineeastapi">Github</a> | <a href="https://api-sle.trentwil.es/"> Live Demo</a> )</h3></h3>
-        <p>Unofficial API for Shore Line East, Connecitcut's shoreline commuter rail system. Developed by scraping data from their website.</p>
+        <p>Unofficial API for Shore Line East, Connecticut's shoreline commuter rail system. Developed by scraping data from their website.</p>
         <p><sup>Python</sup><sup>Beautiful Soup</sup><sup>Varnish</sup></p>
     </aside>
     <aside>
