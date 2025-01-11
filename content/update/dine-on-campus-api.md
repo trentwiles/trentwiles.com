@@ -9,7 +9,7 @@ CENTER THIS BECAUSE IT LOOKS SOMEWHAT BAD
 Not sure if there is a way to do this, <section> tag failed
 -->
 
-Base: [api.dineoncampus.com](https://api.dineoncampus.com)
+Base: [https://api.dineoncampus.com](api.dineoncampus.com)
 
 ## Location IDs
 
@@ -25,25 +25,24 @@ Base: [api.dineoncampus.com](https://api.dineoncampus.com)
 | The Eatery at Stetson East | 586d05e4ee596f6e6c04b527 |
 | Social House at Stetson West | 65ef4de5c625af0775329cb8 |
 
-## Dining Time IDs
-
-| Time | ID | Location |
-| --- | --- | --- |
-| Breakfast | 66c3ae9a351d530107802cb1 | Int’l Village |
-| Lunch | 66c3ae9a351d530107802cc0 | Int’l Village |
-| Dinner | 66c3ae9a351d530107802ccf | Int’l Village |
-| Everyday | 66c3ae9a351d530107802cd0 | Int’l Village |
-| Breakfast | 66b279bae45d4306779faaae | Steast |
-| Lunch | 66b279bae45d4306779faaca | Steast |
-| Dinner | 66b279bae45d4306779faabc | Steast |
-| Everyday | 66b279bae45d4306779faacb | Steast |
-
 # Methods
 
 ## Menu
 
+Lists the menu(s) for a given location on campus.
+
+| Parameter | Description |
+| --- | --- |
+| DINING_HALL_ID | ID of the dining hall; listed above |
+| PERIOD_ID | Dining period ID that corresponds to dining hall |
+| YEAR | Year (2025, 2024, …) |
+| MONTH | Month number, 1-12 |
+| DAY | Day of the month, 1-31 |
+
+`PERIOD_ID` is optional. Omitting this value will show all periods (ie. breakfast, lunch, and dinner)
+
 ```jsx
-GET /v1/location/{LOCATION_ID}/periods/{PERIOD_ID}?platform=0&date={YEAR}-{MONTH}-{DAY}
+GET /v1/location/{DINING_HALL_ID}/periods/{PERIOD_ID}?platform=0&date={YEAR}-{MONTH}-{DAY}
 
 {
   "status": "success",
@@ -146,21 +145,153 @@ GET /v1/location/{LOCATION_ID}/periods/{PERIOD_ID}?platform=0&date={YEAR}-{MONTH
 }
 ```
 
-| Parameter | Description |
-| --- | --- |
-| LOCATION_ID | ID of the dining hall |
-| PERIOD_ID | Dining period ID that corresponds to dining hall |
-| YEAR | Year (2024, 2023, …) |
-| MONTH | Month number, 1-12 |
-| DAY | Day of the month, 1-31 |
-
 ## Hours
 
-```jsx
-/v1/locations/weekly_schedule?site_id={LOCATION_ID}&date={DATE}
-```
+Listed the hours for all food establishments on campus.
 
 | Parameter | Description |
 | --- | --- |
-| LOCATION_ID | ID of the university/school |
-| DATE | Week started at TZN time, ex. %222024-09-19T04:00:00.000Z%22 |
+| LOCATION_ID | ID of the university/school, listed at top of page |
+| DATE | Week started at TZN time, ex. `"2025-01-18T05:00:00.000Z”` |
+
+```
+GET /v1/locations/weekly_schedule?site_id={LOCATION_ID}&date={DATE}
+
+{
+  "status": "success",
+  "request_time": 1.799910867,
+  "records": 0,
+  "the_locations": [
+    {
+      "id": "62fee2a1c625af082fa90a66",
+      "active": true,
+      "has_delivery_robots": false,
+      "has_food_lockers": false,
+      "is_delivery": false,
+      "is_delivery_only": false,
+      "is_dine_in": false,
+      "is_mobile": false,
+      "is_mobile_only": false,
+      "is_open_late": false,
+      "is_takeout": false,
+      "is_takeout_only": false,
+      "occupancy": "na",
+      "pay_with_apple_pay": false,
+      "pay_with_cash": false,
+      "pay_with_cc": false,
+      "pay_with_dining_dollars": false,
+      "pay_with_google_pay": false,
+      "pay_with_meal_exchange": false,
+      "pay_with_meal_trade": false,
+      "pay_with_meal_swipe": false,
+      "pay_with_retail_swipe": false,
+      "pay_with_samsung_pay": false,
+      "pay_with_meal_plan": false,
+      "custom_payment_types": [],
+      "status": {
+        "label": "closed",
+        "message": "Closed. Opens Monday at 7:30am.",
+        "color": "red"
+      },
+      "name": "Dunkin' Shillman",
+      "sort_order": null,
+      "is_building": false,
+      "building_id": "",
+      "week": [
+        {
+          "day": 0,
+          "date": "2025-01-12",
+          "status": "closed",
+          "hours": [],
+          "has_special_hours": false,
+          "closed": true
+        },
+        {
+          "day": 1,
+          "date": "2025-01-13",
+          "status": "open",
+          "hours": [
+            {
+              "start_hour": 7,
+              "start_minutes": 30,
+              "end_hour": 15,
+              "end_minutes": 0
+            }
+          ],
+          "has_special_hours": false,
+          "closed": false
+        },
+        {
+          "day": 2,
+          "date": "2025-01-14",
+          "status": "open",
+          "hours": [
+            {
+              "start_hour": 7,
+              "start_minutes": 30,
+              "end_hour": 15,
+              "end_minutes": 0
+            }
+          ],
+          "has_special_hours": false,
+          "closed": false
+        },
+        {
+          "day": 3,
+          "date": "2025-01-15",
+          "status": "open",
+          "hours": [
+            {
+              "start_hour": 7,
+              "start_minutes": 30,
+              "end_hour": 15,
+              "end_minutes": 0
+            }
+          ],
+          "has_special_hours": false,
+          "closed": false
+        },
+        {
+          "day": 4,
+          "date": "2025-01-16",
+          "status": "open",
+          "hours": [
+            {
+              "start_hour": 7,
+              "start_minutes": 30,
+              "end_hour": 15,
+              "end_minutes": 0
+            }
+          ],
+          "has_special_hours": false,
+          "closed": false
+        },
+        {
+          "day": 5,
+          "date": "2025-01-17",
+          "status": "open",
+          "hours": [
+            {
+              "start_hour": 7,
+              "start_minutes": 30,
+              "end_hour": 15,
+              "end_minutes": 0
+            }
+          ],
+          "has_special_hours": false,
+          "closed": false
+        },
+        {
+          "day": 6,
+          "date": "2025-01-18",
+          "status": "closed",
+          "hours": [],
+          "has_special_hours": false,
+          "closed": true
+        }
+      ]
+    },
+    ...
+  ]
+}
+```
