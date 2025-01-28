@@ -13,7 +13,7 @@ description: "I’m Trent Wiles, a Computer Science & Criminal Justice student s
 </section>
 
 <section>
-    <a href="http://lghut5dd7wf7yn7wydt4f7eioudlvl42uo2hz4sbesddqqlbdzpaxyyd.onion"><code>lghut5dd7wf7yn7wydt4f7eioudlvl42uo2hz4sbesddqqlbdzpaxyyd.onion</code></a>
+    <a href='http://lghut5dd7wf7yn7wydt4f7eioudlvl42uo2hz4sbesddqqlbdzpaxyyd.onion'><code>lghut5dd7wf7yn7wydt4f7eioudlvl42uo2hz4sbesddqqlbdzpaxyyd.onion</code></a>
 </section>
 "
 ---
