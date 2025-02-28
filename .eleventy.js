@@ -29,6 +29,13 @@ function formatCityName(city) {
     .replace(/\b\w/g, char => char.toUpperCase());
 }
 
+function responseTimeFormat(intake) {
+  if (intake <= 999) {
+    return intake + "ms"
+  }
+  return (round(intake/1000, 2)) + "s"
+}
+
 function helperMakeLinkHTML() {
   const fullHash = execSync('git rev-parse HEAD').toString().trim()
   return `<a href="https://github.com/trentwiles/trentwiles.com/commit/${fullHash}" target="_blank" id="commitHash">${fullHash.substring(0,5)}</a>`
@@ -142,7 +149,7 @@ async function pullVerboseUptimeStatus() {
         // Status From Each Monitor
         var cityText = `<div class="all-city">`
         for (const [city, data] of Object.entries(element["locations"])) {
-          cityText += `<div class="city-info"><p>${LOCATION_MAP[city]} - ${data["response_time"]}ms</p></div>`
+          cityText += `<div class="city-info"><p>${LOCATION_MAP[city]} - ${responseTimeFormat(data["response_time"])}</p></div>`
         }
         cityText += `</div>`
 
