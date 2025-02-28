@@ -9,24 +9,17 @@ const GLOBAL_USER_AGENT = "11ty/trentwiles.com (+https://www.trentwiles.com)"
 
 // city -> country flag
 const LOCATION_MAP = {
-  "london": `<img class="flag flag-gb" src="https://trentwil.es/a/blank.gif">`,
-  "mumbai":`<img class="flag flag-in" src="https://trentwil.es/a/blank.gif">`,
-  "new_york": `<img class="flag flag-us" src="https://trentwil.es/a/blank.gif">`,
-  "sydney": `<img class="flag flag-au" src="https://trentwil.es/a/blank.gif">`,
-  "frankfurt": `<img class="flag flag-de" src="https://trentwil.es/a/blank.gif">`,
-  "sao_paulo": `<img class="flag flag-br" src="https://trentwil.es/a/blank.gif">`,
-  "singapore": `<img class="flag flag-sg" src="https://trentwil.es/a/blank.gif">`,
-  "amsterdam": `<img class="flag flag-nl" src="https://trentwil.es/a/blank.gif">`,
-  "tokyo": `<img class="flag flag-jp" src="https://trentwil.es/a/blank.gif">`,
-  "san_fransisco": `<img class="flag flag-us" src="https://trentwil.es/a/blank.gif">`,
-  "warsaw": `<img class="flag flag-pl" src="https://trentwil.es/a/blank.gif">`,
-}
-
-function formatCityName(city) {
-  return city
-    .replace(/_/g, " ")      
-    .toLowerCase()
-    .replace(/\b\w/g, char => char.toUpperCase());
+  "london": `<img class="flag flag-gb" alt="London" src="https://trentwil.es/a/blank.gif">`,
+  "mumbai":`<img class="flag flag-in" alt="Mumbai" src="https://trentwil.es/a/blank.gif">`,
+  "new_york": `<img class="flag flag-us" alt="New York" src="https://trentwil.es/a/blank.gif">`,
+  "sydney": `<img class="flag flag-au" alt="Sydney" src="https://trentwil.es/a/blank.gif">`,
+  "frankfurt": `<img class="flag flag-de" alt="Frankfurt" src="https://trentwil.es/a/blank.gif">`,
+  "sao_paulo": `<img class="flag flag-br" alt="Sao Paulo" src="https://trentwil.es/a/blank.gif">`,
+  "singapore": `<img class="flag flag-sg" alt="Singapore" src="https://trentwil.es/a/blank.gif">`,
+  "amsterdam": `<img class="flag flag-nl" alt="Amsterdam" src="https://trentwil.es/a/blank.gif">`,
+  "tokyo": `<img class="flag flag-jp" alt="Tokyo" src="https://trentwil.es/a/blank.gif">`,
+  "san_fransisco": `<img class="flag flag-us" alt="San Fransisco" src="https://trentwil.es/a/blank.gif">`,
+  "warsaw": `<img class="flag flag-pl" alt="Warsaw" src="https://trentwil.es/a/blank.gif">`,
 }
 
 function responseTimeFormat(intake) {
@@ -124,11 +117,6 @@ async function pullVerboseUptimeStatus() {
   <style>
     .city-info img {
       vertical-align: middle;
-    }
-    .all-city {
-      text-align: justify;
-      padding-left: 10vw;
-      padding-right: 10vw;
     }
   </style>
   <section>
