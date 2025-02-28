@@ -33,7 +33,7 @@ function responseTimeFormat(intake) {
   if (intake <= 999) {
     return intake + "ms"
   }
-  return (round(intake/1000, 2)) + "s"
+  return (Math.round(intake/100))/10 + "s"
 }
 
 function helperMakeLinkHTML() {
