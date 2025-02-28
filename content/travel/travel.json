@@ -1,4 +1,4 @@
 {
-    "layout": "page.liquid",
+    "layout": "post.liquid",
     "tags": ["travel"]
 }

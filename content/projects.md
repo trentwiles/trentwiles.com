@@ -3,11 +3,6 @@ layout: page.liquid
 pageTitle: My Projects
 description: Various personal and class projects I've created over the years.
 ---
-<style>
-    div.terminal-card a {
-        color: #003D80;
-    }
-</style>
 <h2>Current Projects</h2>
 <section id="section-1">
   <div class="terminal-timeline">
@@ -29,7 +24,6 @@ description: Various personal and class projects I've created over the years.
       <header>NodeNews (<a href="https://github.com/trentwiles/NodeNews">Github</a>)</header>
       <div>
         <p>Simple newsletter mailer with a user interface and a functioning admin panel. My first full scale project written in NodeJS.</p>
-        <p><sup>NodeJS</sup> <sup>SQLite</sup><sup>ExpressJS</sup></p>
         <div class="btn-group">
             <button class="btn btn-default btn-ghost">NodeJS</button>
             <button class="btn btn-default btn-ghost">SQLite</button>
