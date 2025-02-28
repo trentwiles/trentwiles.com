@@ -1,23 +1,10 @@
 ---
 layout: page.liquid
 pageTitle: Home
-description: "I’m Trent Wiles, a Computer Science & Criminal Justice student studying at Northeastern University. I program, cycle, and travel the world from time to time.
-
-<section>
-    <header>
-        <p>
-            <a href='https://trentwil.es/a/ResumeJan2025.pdf' target='_blank'><b>Resume (PDF)</b></a>
-            <a href='https://github.com/trentwiles' target='_blank'><b>Github</b></a>
-        </p>
-    </header>
-</section>
-
-<section>
-    <a href='http://ye34yocv4bezvfdwhsk3i7637ho5eklrd47naacvsoexxq4y6advdgad.onion'><code>ye34yocv4bezvfdwhsk3i7637ho5eklrd47naacvsoexxq4y6advdgad.onion</code></a>
-</section>
-"
+description: "I’m Trent Wiles, a Computer Science & Criminal Justice student studying at Northeastern University. I program, cycle, and travel the world from time to time."
 ---
 
+I’m Trent Wiles, a Computer Science & Criminal Justice student studying at Northeastern University. I program, cycle, and travel the world from time to time.
 <!-- 
 
 <section id="favquote">

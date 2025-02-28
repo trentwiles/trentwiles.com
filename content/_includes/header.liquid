@@ -13,7 +13,7 @@
     </script>
 
     <link rel="icon" href="https://avatars.githubusercontent.com/u/59586759?v=4">
-    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+    <link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.4/dist/terminal.min.css" />
 
     <meta charset="utf-8">
     <meta name="description" content="{{ description }}">
@@ -21,21 +21,88 @@
 
     <title>{{ pageTitle }} | Trent Wiles</title>
 </head>
-<header>
-    <nav>
-        <a href="/"><img alt="Logo" src="https://avatars.githubusercontent.com/u/59586759?v=4" height="70"></a>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/projects/">Projects</a></li>
-            <li><a href="/travel/">Travel</a></li>
-            <li><a href="/updates/">Updates</a></li>
+<body>
+<style>
+    .components-grid {
+      display: grid;
+      grid-column-gap: 1.4em;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+    }
 
-            <li><a href="/contact/">Contact</a></li>
-        </ul>
+    .image-grid {
+      display: grid;
+      grid-template-rows: auto;
+      grid-gap: 1em;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(calc(var(--page-width) / 12), 1fr)
+      );
+    }
+
+    @media only screen and (min-width: 70em) {
+      .components-grid {
+        grid-template-columns: 3fr 9fr;
+      }
+
+      .components-grid aside {
+        position: sticky;
+        top: calc(var(--global-space) * 2);
+      }
+    }
+  </style>
+
+    <style>
+        :root {
+            --global-font-size: 15px;
+            --global-line-height: 1.4em;
+            --global-space: 10px;
+            --font-stack: Menlo, Monaco, Lucida Console, Liberation Mono,
+            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace,
+            serif;
+            --mono-font-stack: Menlo, Monaco, Lucida Console, Liberation Mono,
+            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace,
+            serif;
+            --background-color: #222225;
+            --page-width: 60em;
+            --font-color: #e8e9ed;
+            --invert-font-color: #222225;
+            --secondary-color: #a3abba;
+            --tertiary-color: #a3abba;
+            --primary-color: #62c4ff;
+            --error-color: #ff3c74;
+            --progress-bar-background: #3f3f44;
+            --progress-bar-fill: #62c4ff;
+            --code-bg-color: #3f3f44;
+            --input-style: solid;
+            --display-h1-decoration: none;
+        }
+
+        // end css from terminal.css website
+    </style>
+    <style>
+      // fix the a tags inside the cards
+      .terminal-card a {
+        color: #1E3A5F; 
+      }
+    </style>
+    <div class="container">
+  <div class="terminal-nav">
+    <header class="terminal-logo">
+      <div class="logo terminal-prompt"><a href="/" class="no-style">Trent Wiles</a></div>
+    </header>
+    <nav class="terminal-menu">
+      <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+        <li><a href="/" class="menu-item"><span>Home</span></a><meta property="position"></li>
+        <li property="itemListElement" typeof="ListItem"><a href="/projects/" property="item" typeof="WebPage" class="menu-item"><span property="name">Projects</span></a><meta property="position" content="1"></li>
+        <li property="itemListElement" typeof="ListItem"><a href="/travel/" property="item" typeof="WebPage" class="menu-item"><span property="name">Travel</span></a><meta property="position" content="2"></li>
+        <li property="itemListElement" typeof="ListItem"><a href="/about/" property="item" typeof="WebPage" class="menu-item"><span property="name">About</span></a><meta property="position" content="3"></li>
+        <li property="itemListElement" typeof="ListItem"><a href="/contact/" property="item" typeof="WebPage" class="menu-item"><span property="name">Contact</span></a><meta property="position" content="3"></li>
+      </ul>
     </nav>
-    <h1>{{ pageTitle }}</h1>
-    <p>{{ description }}</p>
-</header>
+  </div>
+</div>
+<div class="container">
 <script>
 // formats the build date (which is a global var) into a formatted, time-zone respecting one
 function getFormattedDate(buildTime) {

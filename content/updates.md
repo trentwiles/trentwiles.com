@@ -4,8 +4,17 @@ pageTitle: Thoughts, Ideas, and Notes
 description: Random Notes and Ideas I've Made Public
 ---
 
-{% for post in collections.update | sortByDateDesc %}
-    <h2><a href="{{ post.url }}">{{ post.data.pageTitle }}</a></h2>
-    <p>{{ post.data.description }}</p>
-    <em>{{ post.date | date: "%Y-%m-%d" }}</em>
-{% endfor %}
+<h2>{{ pageTitle }}</h2>
+<section id="posts">
+    <div class="terminal-timeline">
+        {% for post in collections.update | sortByDateDesc %}
+        <div class="terminal-card">
+        <header><a href="{{ post.url }}">{{ post.data.pageTitle }}</a></header>
+            <div>
+                <p>{{ post.data.description }}</p>
+                <sup>{{ post.date | date: "%Y-%m-%d" }}</sup>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>

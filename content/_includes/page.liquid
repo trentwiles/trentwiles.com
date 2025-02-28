@@ -1,11 +1,9 @@
 <!-- MVP.css quickstart template: https://github.com/andybrewer/mvp/ -->
 
 {% include 'header.liquid' %}
-<body>
-    {% # Fixes a styling issue when there is no content on homepage %}
-    {% if page.fileSlug != "" %}
-        <main>
-            {{ content }}
-        </main>
-    {% endif %}
+
+{% # Fixes a styling issue when there is no content on homepage %}
+<main>
+    {{ content }}
+</main>
 {% include 'footer.liquid' %}
