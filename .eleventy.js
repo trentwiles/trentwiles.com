@@ -142,7 +142,7 @@ async function pullVerboseUptimeStatus() {
         // Status From Each Monitor
         var cityText = `<div class="all-city">`
         for (const [city, data] of Object.entries(element["locations"])) {
-          cityText += `<div class="city-info"><p>${LOCATION_MAP[city]} ${formatCityName(city)} - ${data["response_time"]}ms</p></div>`
+          cityText += `<div class="city-info"><p>${LOCATION_MAP[city]} - ${data["response_time"]}ms</p></div>`
         }
         cityText += `</div>`
 
