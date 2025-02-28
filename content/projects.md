@@ -3,7 +3,6 @@ layout: page.liquid
 pageTitle: My Projects
 description: Various personal and class projects I've created over the years.
 ---
-<h2>Current Projects</h2>
 <section id="section-1">
   <div class="terminal-timeline">
     <div class="terminal-card">

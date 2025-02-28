@@ -1,5 +1,9 @@
 {% include 'header.liquid' %}
 
+{% if showTitle != false %}
+  <h2>{{pageTitle}}</h2>
+{% endif %}
+
 {% # Fixes a styling issue when there is no content on homepage %}
 <main>
     {{ content }}

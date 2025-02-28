@@ -3,8 +3,6 @@ layout: page.liquid
 pageTitle: Thoughts, Ideas, and Notes
 description: Random Notes and Ideas I've Made Public
 ---
-
-<h2>{{ pageTitle }}</h2>
 <section id="posts">
     <div class="terminal-timeline">
         {% for post in collections.update | sortByDateDesc %}
