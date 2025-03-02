@@ -12,8 +12,31 @@
     gtag('config', 'G-3B70FNV515');
     </script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="https://avatars.githubusercontent.com/u/59586759?v=4">
     <link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.4/dist/terminal.min.css" />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      nav.terminal-menu {
+        position: sticky;
+        top: 0;
+        overflow: hidden;
+      }
+    </style>
+        <style>
+        nav.terminal-menu {
+        position: sticky;
+        top: 0;
+        background: #222225;
+        z-index: 1000;
+        padding: 10px 0;
+    }
+
+
+    </style>
 
     <meta charset="utf-8">
     <meta name="description" content="{{ description }}">
@@ -80,23 +103,19 @@
 
         // end css from terminal.css website
     </style>
-    <style>
-        div.terminal-card a {
-            color: #003D80;
-        }
-    </style>
-    <div class="container">
-  <div class="terminal-nav">
+
+    <div class="container" style="position: sticky;top: 0;background: #222225;z-index: 1000;">
+    <div class="terminal-nav" >
     <header class="terminal-logo">
       <div class="logo terminal-prompt"><a href="/" class="no-style">Trent Wiles</a></div>
     </header>
     <nav class="terminal-menu">
       <ul vocab="https://schema.org/" typeof="BreadcrumbList">
-        <li><a href="/" class="menu-item"><span>Home</span></a><meta property="position"></li>
-        <li property="itemListElement" typeof="ListItem"><a href="/projects/" property="item" typeof="WebPage" class="menu-item"><span property="name">Projects</span></a><meta property="position" content="1"></li>
+        <li><a href="#" class="menu-item"><span>Home</span></a><meta property="position"></li>
+        <li property="itemListElement" typeof="ListItem"><a href="#projects" property="item" typeof="WebPage" class="menu-item"><span property="name">Projects</span></a><meta property="position" content="1"></li>
         <li property="itemListElement" typeof="ListItem"><a href="https://trentwil.es/a/ResumeJan2025.pdf" property="item" typeof="WebPage" class="menu-item"><span property="name">Resume</span></a><meta property="position" content="2"></li>
         <li property="itemListElement" typeof="ListItem"><a href="/updates/" property="item" typeof="WebPage" class="menu-item"><span property="name">Updates & Thoughts</span></a><meta property="position" content="3"></li>
-        <li property="itemListElement" typeof="ListItem"><a href="/contact/" property="item" typeof="WebPage" class="menu-item"><span property="name">Contact</span></a><meta property="position" content="3"></li>
+        <li property="itemListElement" typeof="ListItem"><a href="#contact" property="item" typeof="WebPage" class="menu-item"><span property="name">Contact</span></a><meta property="position" content="3"></li>
       </ul>
     </nav>
   </div>
