@@ -56,6 +56,52 @@ showTitle: false
   }
 </style>
 <hr>
+<h2 id="skills">Skills</h2>
+<h4>> Languages</h4>
+<div class="btn-group">
+  <button class="btn btn-primary"><i class="fa-brands fa-java"></i>   Java</button>
+  <button class="btn btn-primary"><i class="fa-brands fa-js"></i> Javascript</button>
+  <button class="btn btn-primary"><i class="fa-brands fa-python"></i> Python</button>
+  <button class="btn btn-primary"><i class="fa-brands fa-html5"></i> HTML/CSS</button>
+  <button class="btn btn-primary"><i class="fa-brands fa-html5"></i> Kotlin</button>
+</div>
+<br>
+<h4>> Frameworks</h4>
+<div class="btn-group">
+  <button class="btn btn-primary"><i class="fa-solid fa-flask"></i>   Flask</button>
+  <button class="btn btn-primary"><i class="fa-solid fa-truck-fast"></i> ExpressJS</button>
+  <button class="btn btn-primary"><i class="fa-solid fa-flask-vial"></i> JUnit</button>
+  <button class="btn btn-primary"><i class="fa-solid fa-eye-dropper"></i> Jest</button>
+  <button class="btn btn-primary"><i class="fa-solid fa-gears"></i> JQuery</button>
+</div>
+<br>
+<h4>> Databases</h4>
+<div class="btn-group">
+  <button class="btn btn-primary"><i class="fa-solid fa-database"></i>   PostgreSQL</button>
+  <button class="btn btn-primary"><i class="fa-solid fa-database"></i> MySQL</button>
+  <button class="btn btn-primary"><i class="fa-solid fa-database"></i> SQLite</button>
+  <button class="btn btn-primary"><i class="fa-solid fa-database"></i> MongoDB</button>
+  <button class="btn btn-primary"><i class="fa-solid fa-database"></i> Redis</button>
+</div>
+<br>
+<h4>> Infrastructure</h4>
+<div class="btn-group">
+  <button class="btn btn-primary"><i class="fa-solid fa-server"></i>   Caddy</button>
+  <button class="btn btn-primary"><i class="fa-solid fa-sim-card"></i> Varnish</button>
+  <button class="btn btn-primary"><i class="fa-brands fa-digital-ocean"></i> DigitalOcean</button>
+  <button class="btn btn-primary"><i class="fa-brands fa-linux"></i> Linux</button>
+  <button class="btn btn-primary"><i class="fa-solid fa-gears"></i> Netlify</button>
+</div>
+<style>
+  .fa-brands, .fa-solid {
+    padding-right:10px;
+  }
+  .terminal-card a {
+    color: #d20962;
+    /*background:#1a95e0;*/
+  }
+</style>
+<hr>
 <h2 id="projects">Projects</h2>
 <section id="section-1">
   <div class="terminal-timeline">
@@ -120,9 +166,9 @@ showTitle: false
       </div>
     </div>
     <div class="terminal-card">
-      <header>Notion Automated Export <br> (<a href="https://github.com/trentwiles/NotionAutoExport">Github</a> | <a href="https://youtu.be/pp7c7q78A3g"> Video Demo</a> )</header>
+      <header>Notion Automated Export (<a href="https://github.com/trentwiles/NotionAutoExport">Github</a> | <a href="https://youtu.be/pp7c7q78A3g"> Video Demo</a>)</header>
       <div>
-        <p>Simple CLI script to export a Notion page as static HTML and unzip the contents into a directory. Built by reverse engineering Notion’s Internal API, as the official Notion API has no such option.</p> 
+        <p>Simple CLI script to export a Notion page as static HTML and unzip the contents into a directory. Built by reverse engineering Notion's Internal API, as the official Notion API has no such option.</p> 
         <div class="btn-group">
             <button class="btn btn-default btn-ghost">Python</button>
         </div>  
@@ -187,8 +233,8 @@ showTitle: false
     </div>
     <div class="terminal-timeline">
         <div class="terminal-card">
-        <header>AbuseIPDB</header>
-            <div>
+        <header>AbuseIPDB Contributor</header>
+            <div style="background:var(--secondary-color);display: flex; justify-content: center; align-items: center;">
                 <a href="https://www.abuseipdb.com/user/47625" title="AbuseIPDB is an IP address blacklist for webmasters and sysadmins to report IP addresses engaging in abusive behavior on their networks">
                     <img src="https://www.abuseipdb.com/contributor/47625.svg" alt="AbuseIPDB Contributor Badge" style="width: 401px;">
                 </a>
