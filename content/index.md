@@ -17,10 +17,8 @@ showTitle: false
 }
 </style>
 
-<div class="image-grid" id="imageOfMe">
-  <p>I'm <a href="javascript:void()">Trent Wiles</a>, a <u>Computer Science & Criminal Justice</u> student studying at Northeastern University. I program, cycle, and travel the world from time to time.
-  </p>
-</div>
+<p>I'm <a href="javascript:void()">Trent Wiles</a>, a <u>Computer Science & Criminal Justice</u> student studying at Northeastern University. I program, cycle, and travel the world from time to time.
+</p>
 
 <script>
     const hoverArea = document.getElementById("imageOfMe");
@@ -36,6 +34,13 @@ showTitle: false
         img.style.top = `${event.clientY + 30}px`;
     });
 </script>
+
+<div class="btn-group">
+  <h4><i class="fa-solid fa-location-dot"></i> Boston, MA</h4>
+  <div class="holder-ignore-me"></div>
+  <div class="holder-ignore-me"></div>
+  <h4><i class="fa-solid fa-location-dot"></i> New Haven, CT</h4>
+</div>
 
 <div class="btn-group">
   <button class="btn btn-default btn-ghost"><a href="mailto:me@trentwil.es"><i class="fa-solid fa-envelope"></i> me@trentwil.es</a></button>
@@ -106,6 +111,19 @@ showTitle: false
 <section id="section-1">
   <div class="terminal-timeline">
     <div class="terminal-card">
+      <header>SitDownAndStudy (<a href="https://github.com/trentwiles/SitDownAndStudy">Github</a> | <a href="https://sitdownand.study"> Live Demo</a> )</header>
+      <div>
+        <p>Practice programming with AI-generated, LeetCode-style questions and run your code online. Created with <a href="https://asahoo.dev">Anish Sahoo</a>.</p>
+        <div class="btn-group">
+            <button class="btn btn-default btn-ghost">NodeJS</button>
+            <button class="btn btn-default btn-ghost">React</button>
+            <button class="btn btn-default btn-ghost">Tailwind</button>
+            <button class="btn btn-default btn-ghost">OpenAI API</button>
+            <button class="btn btn-default btn-ghost">MongoDB</button>
+        </div>
+      </div>
+    </div>
+    <div class="terminal-card">
       <header>Trace TL;DR (<a href="https://github.com/trentwiles/tracetldr">Github</a> | <a href="https://trace.trentwiles.com">Live Demo</a>)</header>
       <div>
         <p> Summarizes Northeastern's TRACE professor evaluations, using MongoDB and Google's Gemini AI.</p>
@@ -127,19 +145,6 @@ showTitle: false
             <button class="btn btn-default btn-ghost">NodeJS</button>
             <button class="btn btn-default btn-ghost">SQLite</button>
             <button class="btn btn-default btn-ghost">ExpressJS</button>
-        </div>
-      </div>
-    </div>
-    <div class="terminal-card">
-      <header>SitDownAndStudy (<a href="https://github.com/trentwiles/SitDownAndStudy">Github</a> | <a href="https://sitdownand.study"> Live Demo</a> )</header>
-      <div>
-        <p>Practice programming with AI-generated, LeetCode-style questions and run your code online. Created with <a href="https://asahoo.dev">Anish Sahoo</a>.</p>
-        <div class="btn-group">
-            <button class="btn btn-default btn-ghost">NodeJS</button>
-            <button class="btn btn-default btn-ghost">React</button>
-            <button class="btn btn-default btn-ghost">Tailwind</button>
-            <button class="btn btn-default btn-ghost">OpenAI API</button>
-            <button class="btn btn-default btn-ghost">MongoDB</button>
         </div>
       </div>
     </div>
