@@ -21,7 +21,10 @@ showTitle: false
 </p>
 
 <script>
-    const hoverArea = document.getElementById("imageOfMe");
+  // ONLY execute following content load!
+  // Prevent hoverArea null issue
+  document.addEventListener("DOMContentLoaded", () => {
+    const hoverArea = document.getElementById("hoverarea");
     const img = document.getElementById("floating-image");
     hoverArea.addEventListener("mouseenter", () => {
         img.style.display = "block";
@@ -34,6 +37,7 @@ showTitle: false
         img.style.left = `${event.clientX + 30}px`;
         img.style.top = `${event.clientY + 30}px`;
     });
+  });
 </script>
 
 <!-- TODO: adjust these locations, and their respective icons -->
@@ -151,7 +155,7 @@ showTitle: false
       </div>
     </div>
     <div class="terminal-card">
-      <header>Shore Line East API (<a href="https://github.com/trentwiles/shorelineeastapi">Github</a> | <a href="https://api-sle.trentwil.es/"> Live Demo</a> )</header>
+      <header>Shore Line East API (<a href="https://github.com/trentwiles/shorelineeastapi">Github</a> | <a href="https://api-sle.trentwil.es/"> Live Demo</a>)</header>
       <div>
         <p>Unofficial API for Shore Line East, Connecticut's shoreline commuter rail system. Developed by scraping data from their website.</p>
         <div class="btn-group">
