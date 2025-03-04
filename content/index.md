@@ -5,15 +5,15 @@ description: "I'm Trent Wiles, a Computer Science & Criminal Justice student stu
 showTitle: false
 ---
 <h2>Welcome!</h2>
-<img id="floating-image" src="https://cloudfront-us-east-2.images.arcpublishing.com/reuters/LM36FWTXBNLPHFGY46DBASGZAM.jpg" alt="Floating Image">
+<img id="floating-image" src="https://trentwil.es/a/1694502358338.jpg" alt="Me, Trent Wiles">
 <style>
 #floating-image {
     position: absolute;
     width: 5%;
     height: auto;
-    pointer-events: none; /* Prevent clicks */
+    pointer-events: none;
     transform: translate(-50%, -50%);
-    display: none; /* Hide initially */
+    display: none;
 }
 </style>
 
@@ -30,11 +30,13 @@ showTitle: false
         img.style.display = "none";
     });
     hoverArea.addEventListener("mousemove", (event) => {
+        // displace from mouse by 30px to improve visibility
         img.style.left = `${event.clientX + 30}px`;
         img.style.top = `${event.clientY + 30}px`;
     });
 </script>
 
+<!-- TODO: adjust these locations, and their respective icons -->
 <div class="btn-group">
   <h4><i class="fa-solid fa-location-dot"></i> Boston, MA</h4>
   <div class="holder-ignore-me"></div>
