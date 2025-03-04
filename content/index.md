@@ -17,7 +17,7 @@ showTitle: false
 }
 </style>
 
-<p>I'm <a href="javascript:void()">Trent Wiles</a>, a <u>Computer Science & Criminal Justice</u> student studying at Northeastern University. I program, cycle, and travel the world from time to time.
+<p id="hoverarea">I'm <a href="javascript:void()">Trent Wiles</a>, a <u>Computer Science & Criminal Justice</u> student studying at Northeastern University. I program, cycle, and travel the world from time to time.
 </p>
 
 <script>
