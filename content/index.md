@@ -260,12 +260,5 @@ display: inline-block;
             </div>
         </div>
     <br>
-        <div class="terminal-card">
-        <header>AbuseIPDB Contributor</header>
-            <div style="background:var(--secondary-color);display: flex; justify-content: center; align-items: center;">
-                <!-- <a href="https://www.abuseipdb.com/user/47625" title="AbuseIPDB is an IP address blacklist for webmasters and sysadmins to report IP addresses engaging in abusive behavior on their networks">
-                    <img src="https://www.abuseipdb.com/contributor/47625.svg" alt="AbuseIPDB Contributor Badge" style="display: block;width:50%; height:50%;">
-                </a> -->
-            </div>
 </section>
 <hr>
