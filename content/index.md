@@ -114,22 +114,29 @@ display: inline-block;
     color: #4335A7;
   }
   /* buttons are now fixed on mobile (big news!!!!) */
-   .btn-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+ .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    max-width: 100%;
+    padding: 0 5px; /* edge bleeding prevention */
+    overflow: hidden;
+  }
+  /* mobile button customization */
+  @media (max-width: 768px) {
+    .btn-group {
       justify-content: center;
     }
-    @media (max-width: 768px) {
-      .btn-group {
-        justify-content: flex-start;
-      }
-      .btn-group .btn {
-        flex: 1 1 auto;
-        min-width: 120px;
-      }
+    .btn-group .btn {
+      flex: 1 1 auto;
+      /* keep button readiblity */
+      min-width: 120px;
+      /* prevention of left side overflow*/
+      max-width: calc(50% - 5px);
+      text-align: center;
     }
-}
+  }
 </style>
 <hr>
 <h2 id="projects">Projects</h2>

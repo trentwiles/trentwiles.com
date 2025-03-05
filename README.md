@@ -1,5 +1,12 @@
 # trentwiles.com
 
+## Todo
+
+[ ] - Add hamburger menu for mobile
+[ ] - Consolidate custom CSS into single static file
+[ ] - Delete all unused pages (perhaps updates/travel)
+[ ] - add some humor
+
 ## Installing
 
 ```shell
