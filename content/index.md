@@ -4,6 +4,7 @@ pageTitle: Home
 description: "I'm Trent Wiles, a Computer Science & Criminal Justice student studying at Northeastern University. I program, cycle, and travel the world from time to time."
 showTitle: false
 ---
+
 <h2>Welcome!</h2>
 <img id="floating-image" src="https://trentwil.es/a/1694502358338.jpg" alt="Me, Trent Wiles">
 <style>
@@ -54,6 +55,7 @@ showTitle: false
   <button class="btn btn-default btn-ghost"><a href="https://github.com/trentwiles" target="_blank"><i class="fa-brands fa-github"></i> Github</a></button>
 </div>
 <style>
+  /* spread out buttons, prevent grouping */
   .btn-group {
       display: flex;
       justify-content: center;
@@ -62,10 +64,11 @@ showTitle: false
       margin-top: 20px;
   }
 
-  .btn-group .btn {
-      display: inline-block;
-  }
+.btn-group .btn {
+display: inline-block;
+}
 </style>
+
 <hr>
 <h2 id="skills">Skills</h2>
 <h4>> Languages</h4>
@@ -98,7 +101,7 @@ showTitle: false
 <h4>> Infrastructure</h4>
 <div class="btn-group">
   <button class="btn btn-primary"><i class="fa-solid fa-server"></i>   Caddy</button>
-  <button class="btn btn-primary"><i class="fa-solid fa-sim-card"></i> Varnish</button>
+  <button class="btn btn-primary"><i class="fa-brands fa-github"></i> Github</button>
   <button class="btn btn-primary"><i class="fa-brands fa-digital-ocean"></i> DigitalOcean</button>
   <button class="btn btn-primary"><i class="fa-brands fa-linux"></i> Linux</button>
   <button class="btn btn-primary"><i class="fa-solid fa-gears"></i> Netlify</button>
@@ -108,14 +111,29 @@ showTitle: false
     padding-right:10px;
   }
   .terminal-card a {
-    color: #d20962;
-    /*background:#1a95e0;*/
+    color: #4335A7;
   }
+  /* buttons are now fixed on mobile (big news!!!!) */
+   .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    @media (max-width: 768px) {
+      .btn-group {
+        justify-content: flex-start;
+      }
+      .btn-group .btn {
+        flex: 1 1 auto;
+        min-width: 120px;
+      }
+    }
+}
 </style>
 <hr>
 <h2 id="projects">Projects</h2>
 <section id="section-1">
-  <div class="terminal-timeline">
     <div class="terminal-card">
       <header>SitDownAndStudy (<a href="https://github.com/trentwiles/SitDownAndStudy">Github</a> | <a href="https://sitdownand.study"> Live Demo</a> )</header>
       <div>
@@ -129,6 +147,7 @@ showTitle: false
         </div>
       </div>
     </div>
+    <br>
     <div class="terminal-card">
       <header>Trace TL;DR (<a href="https://github.com/trentwiles/tracetldr">Github</a> | <a href="https://trace.trentwiles.com">Live Demo</a>)</header>
       <div>
@@ -143,6 +162,7 @@ showTitle: false
         </div>
       </div>
     </div>
+    <br>
     <div class="terminal-card">
       <header>NodeNews (<a href="https://github.com/trentwiles/NodeNews">Github</a>)</header>
       <div>
@@ -154,6 +174,7 @@ showTitle: false
         </div>
       </div>
     </div>
+    <br>
     <div class="terminal-card">
       <header>Shore Line East API (<a href="https://github.com/trentwiles/shorelineeastapi">Github</a> | <a href="https://api-sle.trentwil.es/"> Live Demo</a>)</header>
       <div>
@@ -165,6 +186,7 @@ showTitle: false
         </div> 
       </div>
     </div>
+    <br>
     <div class="terminal-card">
       <header>BART API (<a href="https://github.com/trentwiles/BARTAPI">Github</a> | <a href="https://bart.trentwil.es/"> Live Demo</a> )</header>
       <div>
@@ -176,6 +198,7 @@ showTitle: false
         </div>      
       </div>
     </div>
+    <br>
     <div class="terminal-card">
       <header>Notion Automated Export (<a href="https://github.com/trentwiles/NotionAutoExport">Github</a> | <a href="https://youtu.be/pp7c7q78A3g"> Video Demo</a>)</header>
       <div>
@@ -185,15 +208,13 @@ showTitle: false
         </div>  
       </div>
     </div>
-  </div>
 </section>
 
 <hr>
 <h2>Legacy Projects</h2>
 
 <section id="section-2">
-    <div class="terminal-timeline">
-        <div class="terminal-card">
+      <div class="terminal-card">
         <header>AP Calculus BC Final (<a href="https://github.com/trentwiles/calcbcfinal">Github</a> | <a href="https://integral.trentwil.es/"> Live Demo</a> )</header>
             <div>
                 <p>Tool that compares Integrals to Riemann Sums and the Midpoint Rule. This is the final project for my AP Calculus BC class for my senior year of high school. (2023)</p>
@@ -202,9 +223,8 @@ showTitle: false
                     <button class="btn btn-default btn-ghost">LaTeX</button>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="terminal-timeline">
+      </div>
+    <br>
         <div class="terminal-card">
         <header>Flag (<a href="https://github.com/trentwiles/flag">Github</a>)</header>
             <div>
@@ -213,10 +233,9 @@ showTitle: false
                     <button class="btn btn-default btn-ghost">PHP</button>
                     <button class="btn btn-default btn-ghost">MySQL</button>
                 </div>
-            </div>
-        </div>
+          </div>
     </div>
-    <div class="terminal-timeline">
+    <br>
         <div class="terminal-card">
         <header>1337git (<a href="https://github.com/trentwiles/1337git">Github</a>)</header>
             <div>
@@ -227,9 +246,8 @@ showTitle: false
                     <button class="btn btn-default btn-ghost">Javascript</button>
                 </div>
             </div>
-        </div>
     </div>
-    <div class="terminal-timeline">
+    <br>
         <div class="terminal-card">
         <header>Dangerous User DB <br> (<a class="customColor" href="https://github.com/trentwiles/DangerousUserDB">Github</a> | <a href="https://web.archive.org/web/20210616201659/https://discord.riverside.rocks/">Archived Demo</a>)</header>
             <div>
@@ -241,16 +259,13 @@ showTitle: false
                 </div>
             </div>
         </div>
-    </div>
-    <div class="terminal-timeline">
+    <br>
         <div class="terminal-card">
         <header>AbuseIPDB Contributor</header>
             <div style="background:var(--secondary-color);display: flex; justify-content: center; align-items: center;">
-                <a href="https://www.abuseipdb.com/user/47625" title="AbuseIPDB is an IP address blacklist for webmasters and sysadmins to report IP addresses engaging in abusive behavior on their networks">
-                    <img src="https://www.abuseipdb.com/contributor/47625.svg" alt="AbuseIPDB Contributor Badge" style="width: 401px;">
-                </a>
+                <!-- <a href="https://www.abuseipdb.com/user/47625" title="AbuseIPDB is an IP address blacklist for webmasters and sysadmins to report IP addresses engaging in abusive behavior on their networks">
+                    <img src="https://www.abuseipdb.com/contributor/47625.svg" alt="AbuseIPDB Contributor Badge" style="display: block;width:50%; height:50%;">
+                </a> -->
             </div>
-        </div>
-    </div>
 </section>
 <hr>
