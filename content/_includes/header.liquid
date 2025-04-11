@@ -103,6 +103,47 @@
         }
 
         /* end css from terminal.css website */
+
+        /* begin custom hamburger css */
+          .terminal-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+          }
+
+          /* Ensure the logo and menu button align horizontally */
+          .terminal-logo {
+            margin: 0;
+          }
+
+          .hamburger-menu {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--font-color);
+            cursor: pointer;
+          }
+
+          /* Only show the hamburger on small screens, hide nav links */
+          @media only screen and (max-width: 768px) {
+            .hamburger-menu {
+              display: block;
+            }
+
+            .terminal-menu ul {
+              display: none;
+              flex-direction: column;
+              background-color: var(--background-color);
+              padding: 10px;
+              margin-top: 10px;
+            }
+
+            .terminal-menu ul.show {
+              display: flex;
+            }
+          }
     </style>
 
     <div class="container" style="position: sticky;top: 0;background: #222225;z-index: 1000;">
@@ -110,6 +151,9 @@
     <header class="terminal-logo">
       <div class="logo terminal-prompt"><a href="/" class="no-style">Trent Wiles</a></div>
     </header>
+    <button id="hamburger-menu" class="hamburger-menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
     <nav class="terminal-menu">
       <ul vocab="https://schema.org/" typeof="BreadcrumbList">
         <li><a href="/#" class="menu-item"><span>Home</span></a><meta property="position"></li>
@@ -160,4 +204,15 @@ window.onload = function() {
         atag.innerHTML = cHash
     })
 }
+
+// hamburger js
+document.getElementById('hamburger-menu').addEventListener('click', function() {
+    var menu = document.querySelector('.terminal-menu ul');
+    // Toggle visibility: if hidden, display it; if visible, hide it
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+    } else {
+        menu.style.display = 'block';
+    }
+});
 </script>
