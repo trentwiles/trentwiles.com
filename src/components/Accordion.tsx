@@ -6,7 +6,7 @@ interface AccordionProps {
 }
 
 export default function Accordion({
-    title,
+  title,
   parentId,
   childId,
   buttonTitles,
@@ -39,19 +39,24 @@ export default function Accordion({
         data-parent={parent}
       >
         <div className="card-body">
-          <ul className="extensible-list horizontal">
-            <li>
-              {buttonTitles.map((s, index) => (
-                <button
-                  key={index}
-                  type="button"
-                  className="btn btn-sm rounded-sm btn-info"
-                >
-                  {s}
-                </button>
-              ))}
-            </li>
-          </ul>
+          <div className="row my-2">
+            <div className="col">
+              <ul className="extensible-list horizontal">
+                <li>
+                  {buttonTitles.map((s, index) => (
+                    <button
+                      key={index}
+                      type="button"
+                      className="btn btn-sm rounded-sm btn-info"
+                      style={{ margin: '0 10px' }}
+                    >
+                      {s}
+                    </button>
+                  ))}
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -186,16 +186,19 @@ function App() {
             />
           </AccordionContainer>
         </Section>
+        <hr />
         <Section title="Projects">
           {projects.map((proj, index) => (
             <Project key={index} {...proj} />
           ))}
         </Section>
+        <hr />
         <Section title="Legacy Projects">
           {legacyProjects.map((proj, index) => (
             <Project key={index} {...proj} />
           ))}
         </Section>
+        <hr />
         <Section title="Contact">
           <LargeButton fontAwesomeIcon="envelope" text="me@trentwil.es" />
         </Section>
