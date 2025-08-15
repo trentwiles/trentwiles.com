@@ -1,5 +1,12 @@
+export interface HeaderProps {
+    updated: string;
+    websiteTitle: string;
+    websiteUrl: string;
+    linkTitle: string;
+    link: string;
+}
 
-export default function Header() {
+export default function Header(props: HeaderProps) {
   return (
     <>
       <header id="global-header" role="banner">
@@ -8,21 +15,21 @@ export default function Header() {
             <div className="row py-1 align-items-center justify-content-between">
               <div className="col-auto">
                 <p className="d-none d-md-flex fs-md">
-                  <a className="text-reset" href="https://www1.nyc.gov/">
-                    <strong>trentwiles.com</strong>
+                  <a className="text-reset" href={props.websiteUrl}>
+                    <strong>{props.websiteTitle}</strong>
                   </a>
                   <span className="mx-1" aria-hidden="true">
                     |
                   </span>
-                  Updated 3/2/2025
+                  Updated {props.updated}
                 </p>
               </div>
 
               <div className="col-auto">
                 <ul className="extensible-list horizontal fs-md">
                   <li>
-                    <a className="text-reset" href="/index.pdf">
-                      <strong>Downloadable Resume</strong>
+                    <a className="text-reset" href={props.link}>
+                      <strong>{props.linkTitle}</strong>
                     </a>
                   </li>
                 </ul>

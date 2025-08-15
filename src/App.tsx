@@ -2,7 +2,7 @@ import "./App.css";
 import Accordion from "./components/Accordion";
 import AccordionContainer from "./components/AccordionContainer";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
+import Header, { type HeaderProps } from "./components/Header";
 import Hero from "./components/Hero";
 import Section from "./components/Section";
 import Project, { type ProjectProps } from "./components/Project";
@@ -53,6 +53,43 @@ function App() {
     },
   ];
 
+  const languages: string[] = [
+    "Python",
+    "Java",
+    "JavaScript + TypeScript",
+    "HTML/CSS",
+    "Kotlin",
+  ];
+  const frameworks: string[] = [
+    "Flask",
+    "ExpressJS",
+    "JUnit",
+    "Jest",
+    "JQuery",
+  ];
+  const databases: string[] = [
+    "PostgreSQL",
+    "MySQL",
+    "SQLite",
+    "MongoDB",
+    "Redis",
+  ];
+  const infra: string[] = [
+    "Caddy",
+    "GitHub",
+    "DigitalOcean",
+    "Linux",
+    "Netlify",
+  ];
+
+  const headerData: HeaderProps = {
+    updated: "8/15/2025",
+    websiteTitle: "trentwiles.com",
+    websiteUrl: "https://www.trentwiles.com",
+    linkTitle: "Downloadable Resume",
+    link: "https://trentwil.es/a/ResumeTrentWiles.pdf",
+  };
+
   const legacyProjects: ProjectProps[] = [
     {
       name: "AP Calculus BC Final",
@@ -75,14 +112,16 @@ function App() {
     },
     {
       name: "Dangerous User DB",
-      description: "Track reports of fraud on Discord accounts. PHP was my first language... I have regrets. (2020)",
+      description:
+        "Track reports of fraud on Discord accounts. PHP was my first language... I have regrets. (2020)",
       skills: ["PHP", "MySQL", "Apache Web Server"],
       url: "https://github.com/trentwiles/dangeroususerdb",
     },
   ];
+
   return (
     <>
-      <Header />
+      <Header {...headerData} />
       <main id="skip-header-content" role="main">
         <Hero
           title="👋"
@@ -94,10 +133,28 @@ function App() {
         <Section title="Technical Skills">
           <AccordionContainer id="01">
             <Accordion
-              buttonTitles={["Python", "Ruby"]}
+              buttonTitles={languages}
               childId="01"
               parentId="01"
               title="Languages"
+            />
+            <Accordion
+              buttonTitles={frameworks}
+              childId="02"
+              parentId="01"
+              title="Frameworks"
+            />
+            <Accordion
+              buttonTitles={databases}
+              childId="03"
+              parentId="01"
+              title="Databases"
+            />
+            <Accordion
+              buttonTitles={infra}
+              childId="04"
+              parentId="01"
+              title="Infrastructure"
             />
           </AccordionContainer>
         </Section>

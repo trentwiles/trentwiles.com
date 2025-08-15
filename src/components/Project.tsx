@@ -4,7 +4,7 @@ export interface ProjectProps {
   url: string;
   skills: string[];
 }
-//style="text-align: left;"
+
 export default function Project(props: ProjectProps) {
   return (
     <div className="narrow my-4" style={{ textAlign: "left" }}>
@@ -13,15 +13,23 @@ export default function Project(props: ProjectProps) {
       </a>
 
       <p>{props.description}</p>
-      {props.skills.map((s, index) => (
-        <button
-          key={index}
-          type="button"
-          className="btn btn-sm rounded-sm btn-info"
-        >
-          {s}
-        </button>
-      ))}
+      <div className="row my-2">
+        <div className="col">
+          <ul className="extensible-list horizontal">
+            {props.skills.map((s, index) => (
+              <li>
+                <button
+                  key={index}
+                  type="button"
+                  className="btn btn-sm rounded-sm btn-info"
+                >
+                  {s}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
