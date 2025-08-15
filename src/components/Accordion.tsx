@@ -12,7 +12,7 @@ export default function Accordion({
   buttonTitles,
 }: AccordionProps) {
   const child = "acc-button-" + childId;
-  const parent = "#accordian-" + parentId;
+  const parent = "#accordion-" + parentId;
   return (
     <div className="card">
       <a
