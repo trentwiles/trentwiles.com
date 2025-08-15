@@ -48,7 +48,7 @@ export default function Accordion({
                       key={index}
                       type="button"
                       className="btn btn-sm rounded-sm btn-info"
-                      style={{ margin: '0 10px' }}
+                      style={{ margin: '5px 10px' }}
                     >
                       {s}
                     </button>
