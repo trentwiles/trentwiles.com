@@ -10762,7 +10762,7 @@ legend,
 }
 
 .banner-with-background.oculus::before {
-  background-image: url("../images/neujpg.jpg");
+  background-image: url("../neujpg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
