@@ -41,20 +41,18 @@ export default function Accordion({
         <div className="card-body">
           <div className="row my-2">
             <div className="col">
-              <ul className="extensible-list horizontal">
-                <li>
-                  {buttonTitles.map((s, index) => (
+              <div className="d-flex flex-wrap">
+                {buttonTitles.map((s, index) => (
                     <button
                       key={index}
                       type="button"
                       className="btn btn-sm rounded-sm btn-info"
-                      style={{ margin: '5px 10px' }}
+                      style={{ margin: "5px 5px" }}
                     >
                       {s}
                     </button>
-                  ))}
-                </li>
-              </ul>
+                ))}
+              </div>
             </div>
           </div>
         </div>

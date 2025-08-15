@@ -15,19 +15,18 @@ export default function Project(props: ProjectProps) {
       <p>{props.description}</p>
       <div className="row my-2">
         <div className="col">
-          <ul className="extensible-list horizontal">
+          <div className="d-flex flex-wrap">
             {props.skills.map((s, index) => (
-              <li>
                 <button
                   key={index}
                   type="button"
                   className="btn btn-sm rounded-sm btn-info"
+                  style={{ margin: "5px 5px" }}
                 >
                   {s}
                 </button>
-              </li>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     </div>
