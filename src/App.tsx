@@ -7,7 +7,35 @@ import Hero from "./components/Hero";
 import Section from "./components/Section";
 import Project, { type ProjectProps } from "./components/Project";
 import LargeButton from "./components/LargeButton";
+import { useEffect, useState } from "react";
+
 function App() {
+  const [updatedDate, setUpdatedDate] = useState<string>("Loading...");
+
+  useEffect(() => {
+    fetch("https://api.github.com/repos/trentwiles/trentwiles.com/commits")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        if (data.length > 0) {
+          const dte = new Date(data[0]["commit"]["author"]["date"]);
+          setUpdatedDate(
+            `${dte.getMonth()}/${dte.getDay()}/${dte.getFullYear()}`
+          );
+        } else {
+          setUpdatedDate("Update Date Unknown");
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+        setUpdatedDate("Update Date Unknown");
+      });
+  }, []);
+
   const projects: ProjectProps[] = [
     {
       name: "SitDownAndStudy",
@@ -83,7 +111,7 @@ function App() {
   ];
 
   const headerData: HeaderProps = {
-    updated: "8/15/2025",
+    updated: updatedDate,
     websiteTitle: "trentwiles.com",
     websiteUrl: "https://www.trentwiles.com",
     linkTitle: "Downloadable Resume",
