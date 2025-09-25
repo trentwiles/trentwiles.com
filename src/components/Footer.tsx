@@ -71,19 +71,17 @@ export default function Footer() {
                     <div className="col-md-6 col-lg-4">
 
                         <h1 className="display-6 text-white">
-                            <a href="https://en.wikipedia.org/wiki/Second_Avenue_Subway" target="_blank"><span
-                                    className="subway-icon mta-turquoise">T</span></a>
-                            <span className="subway-icon mta-yellow">R</span>
-                            <span className="subway-icon mta-blue">E</span>
-                            <span className="subway-icon mta-yellow">N</span>
-                            <a href="https://en.wikipedia.org/wiki/Second_Avenue_Subway" target="_blank"><span
-                                    className="subway-icon mta-turquoise">T</span></a>
+                            <a href="https://en.wikipedia.org/wiki/Second_Avenue_Subway" target="_blank"><span className="subway-icon mta-turquoise">T</span></a>
+                            <a href="https://en.wikipedia.org/wiki/R_(New_York_City_Subway_service)" target="_blank"><span className="subway-icon mta-yellow">R</span></a>
+                            <a href="https://en.wikipedia.org/wiki/E_(New_York_City_Subway_service)" target="_blank"><span className="subway-icon mta-blue">E</span></a>
+                            <a href="https://en.wikipedia.org/wiki/N_(New_York_City_Subway_service)" target="_blank"><span className="subway-icon mta-yellow">N</span></a>
+                            <a href="https://en.wikipedia.org/wiki/Second_Avenue_Subway" target="_blank"><span className="subway-icon mta-turquoise">T</span></a>
                             <br />
-                            <span className="subway-icon mta-yellow">W</span>
-                            <span className="subway-icon mta-red">1</span>
-                            <span className="subway-icon mta-gray">L</span>
-                            <span className="subway-icon mta-blue">E</span>
-                            <span className="subway-icon mta-gray">S</span>
+                            <a href="https://en.wikipedia.org/wiki/W_(New_York_City_Subway_service)" target="_blank"><span className="subway-icon mta-yellow">W</span></a>
+                            <a href="https://en.wikipedia.org/wiki/1_(New_York_City_Subway_service)" target="_blank"><span className="subway-icon mta-red">1</span></a>
+                            <a href="https://en.wikipedia.org/wiki/L_(New_York_City_Subway_service)" target="_blank"><span className="subway-icon mta-gray">L</span></a>
+                            <a href="https://en.wikipedia.org/wiki/E_(New_York_City_Subway_service)" target="_blank"><span className="subway-icon mta-blue">E</span></a>
+                            <a href="https://en.wikipedia.org/wiki/Rockaway_Park_Shuttle" target="_blank"><span className="subway-icon mta-gray">S</span></a>
                         </h1>
                         <strong className="fs-sm">YOU'RE EITHER A BLESSING OR A LESSON</strong>
                         
