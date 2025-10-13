@@ -9,8 +9,22 @@ import Project, { type ProjectProps } from "./components/Project";
 import LargeButton from "./components/LargeButton";
 import { useEffect, useState } from "react";
 
+function _extractTwelveHour(d: Date): string {
+  let hours = d.getHours();
+  let minutes = d.getMinutes();
+
+  const ampm = hours >= 12 ? "PM" : "AM";
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+
+  const formattedMinutes = minutes.toString().padStart(2, "0");
+
+  return `${hours}:${formattedMinutes} ${ampm}`
+}
+
 function App() {
   const [updatedDate, setUpdatedDate] = useState<string>("Loading...");
+  const [updateLink, setUpdateLink] = useState<string>("#")
 
   useEffect(() => {
     fetch("https://api.github.com/repos/trentwiles/trentwiles.com/commits")
@@ -23,12 +37,15 @@ function App() {
       .then((data) => {
         if (data.length > 0) {
           const dte = new Date(data[0]["commit"]["author"]["date"]);
+          const url = data[0]["html_url"];
+
           setUpdatedDate(
-            `${dte.getMonth()}/${dte.getDay()}/${dte.getFullYear()}`
+            `${dte.getMonth() + 1}/${dte.getDate()}/${dte.getFullYear()} ${_extractTwelveHour(dte)}`
           );
+          setUpdateLink(url)
         } else {
           setUpdatedDate("Update Date Unknown");
-        }
+        } 
       })
       .catch((error) => {
         console.error(error);
@@ -112,6 +129,7 @@ function App() {
 
   const headerData: HeaderProps = {
     updated: updatedDate,
+    updatedLink: updateLink,
     websiteTitle: "trentwiles.com",
     websiteUrl: "https://www.trentwiles.com",
     linkTitle: "Downloadable Resume",

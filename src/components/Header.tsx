@@ -1,5 +1,6 @@
 export interface HeaderProps {
     updated: string;
+    updatedLink: string;
     websiteTitle: string;
     websiteUrl: string;
     linkTitle: string;
@@ -21,7 +22,9 @@ export default function Header(props: HeaderProps) {
                   <span className="mx-1" aria-hidden="true">
                     |
                   </span>
-                  Updated {props.updated}
+                  <a href={props.updatedLink} style={{ textDecoration: "none", color: "inherit" }}>
+                    Updated {props.updated}
+                  </a>
                 </p>
               </div>
 
