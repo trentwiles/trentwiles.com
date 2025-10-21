@@ -133,7 +133,8 @@ function App() {
     websiteTitle: "trentwiles.com",
     websiteUrl: "https://www.trentwiles.com",
     linkTitle: "Downloadable Resume",
-    link: "https://trentwil.es/a/ResumeTrentWiles.pdf",
+    link: "https://github.com/trentwiles/resume/raw/refs/heads/main/trent_in_progress_resume.pdf"
+    //link: "https://trentwil.es/a/ResumeTrentWiles.pdf",
   };
 
   const legacyProjects: ProjectProps[] = [
