@@ -46,8 +46,8 @@ export default function Footer() {
 
                                 <ul className="extensible-list">
                                     <li>
-                                        <a className="text-reset" href="https://devpost.com/trentwiles">
-                                            <strong>Devpost</strong>
+                                        <a className="text-reset" href="https://stats.fm/elephantandcastle">
+                                            <strong>stats.fm</strong>
                                         </a>
                                     </li>
                                     <li>
@@ -57,8 +57,8 @@ export default function Footer() {
                                         </a>
                                     </li>
                                     <li>
-                                        <a className="text-reset" href="/tos">
-                                            <strong>Privacy</strong>
+                                        <a className="text-reset" href="https://nupd.trentwiles.com/">
+                                            <strong>NUPD Activity Map</strong>
                                         </a>
                                     </li>
                                 </ul>
