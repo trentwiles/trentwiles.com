@@ -221,6 +221,12 @@ function App() {
         <Section title="Contact">
           <LargeButton fontAwesomeIcon="envelope" text="me@trentwil.es" />
         </Section>
+        <hr />
+        <Section title="Security Incident Reporting">
+          <a href="https://www.abuseipdb.com/user/47625" title="AbuseIPDB is an IP address blacklist for webmasters and sysadmins to report IP addresses engaging in abusive behavior on their networks">
+          <img src="https://www.abuseipdb.com/contributor/47625.svg" alt="AbuseIPDB Contributor Badge" style={{ width: 401 }} />
+        </a>
+        </Section>
       </main>
       <Footer />
     </>
