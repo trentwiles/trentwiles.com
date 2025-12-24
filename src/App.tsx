@@ -8,6 +8,7 @@ import Section from "./components/Section";
 import Project, { type ProjectProps } from "./components/Project";
 import LargeButton from "./components/LargeButton";
 import { useEffect, useState } from "react";
+import WebsocketUI from "./components/WebsocketUI";
 
 function _extractTwelveHour(d: Date): string {
   let hours = d.getHours();
@@ -226,6 +227,10 @@ function App() {
           <a href="https://www.abuseipdb.com/user/47625" title="AbuseIPDB is an IP address blacklist for webmasters and sysadmins to report IP addresses engaging in abusive behavior on their networks">
           <img src="https://www.abuseipdb.com/contributor/47625.svg" alt="AbuseIPDB Contributor Badge" style={{ width: 401 }} />
         </a>
+        </Section>
+        <hr />
+        <Section title="Live Server Metrics (IAD)">
+          <WebsocketUI />
         </Section>
       </main>
       <Footer />

@@ -1,4 +1,23 @@
 @charset "UTF-8";
+
+/*
+custom MBTA font for the websocket loading/error message
+*/
+@font-face {
+  font-family: "MBTABRD215";
+  src: url("/MBTABRD215.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.subway-sign {
+  font-family: "MBTABRD215", sans-serif;
+  color: black;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
 /*
 
 In this file:
