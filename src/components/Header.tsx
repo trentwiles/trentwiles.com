@@ -7,6 +7,8 @@ export interface HeaderProps {
     link: string;
 }
 
+import { Link } from "react-router-dom";
+
 export default function Header(props: HeaderProps) {
   return (
     <>
@@ -31,6 +33,11 @@ export default function Header(props: HeaderProps) {
               <div className="col-auto">
                 <ul className="extensible-list horizontal fs-md">
                   <li>
+                    <Link className="text-reset" to="/">
+                      <strong>Home</strong>
+                    </Link>
+                  </li>
+                  <li>
                     <a className="text-reset" href={props.link}>
                       <strong>{props.linkTitle}</strong>
                     </a>
@@ -46,9 +53,9 @@ export default function Header(props: HeaderProps) {
             <div className="row align-items-center">
               <div className="col-lg py-2">
                 <div className="d-flex justify-content-center">
-                  <a
+                  <Link
                     className="align-self-center"
-                    href="#"
+                    to="/"
                     title="Home"
                     style={{ textDecoration: "none" }}
                   >
@@ -56,7 +63,7 @@ export default function Header(props: HeaderProps) {
                     <p className="text-center text-muted">
                       (pronounced "Trent Wiles")
                     </p>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -7,52 +7,11 @@ import Hero from "./components/Hero";
 import Section from "./components/Section";
 import Project, { type ProjectProps } from "./components/Project";
 import LargeButton from "./components/LargeButton";
-import { useEffect, useState } from "react";
 import WebsocketUI from "./components/WebsocketUI";
-
-function _extractTwelveHour(d: Date): string {
-  let hours = d.getHours();
-  let minutes = d.getMinutes();
-
-  const ampm = hours >= 12 ? "PM" : "AM";
-  hours = hours % 12;
-  hours = hours ? hours : 12;
-
-  const formattedMinutes = minutes.toString().padStart(2, "0");
-
-  return `${hours}:${formattedMinutes} ${ampm}`
-}
+import headerData from "./useHeaderData";
+import useHeaderData from "./useHeaderData";
 
 function App() {
-  const [updatedDate, setUpdatedDate] = useState<string>("Loading...");
-  const [updateLink, setUpdateLink] = useState<string>("#")
-
-  useEffect(() => {
-    fetch("https://api.github.com/repos/trentwiles/trentwiles.com/commits")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        if (data.length > 0) {
-          const dte = new Date(data[0]["commit"]["author"]["date"]);
-          const url = data[0]["html_url"];
-
-          setUpdatedDate(
-            `${dte.getMonth() + 1}/${dte.getDate()}/${dte.getFullYear()} ${_extractTwelveHour(dte)}`
-          );
-          setUpdateLink(url)
-        } else {
-          setUpdatedDate("Update Date Unknown");
-        } 
-      })
-      .catch((error) => {
-        console.error(error);
-        setUpdatedDate("Update Date Unknown");
-      });
-  }, []);
 
   const projects: ProjectProps[] = [
     {
@@ -128,15 +87,7 @@ function App() {
     "Netlify",
   ];
 
-  const headerData: HeaderProps = {
-    updated: updatedDate,
-    updatedLink: updateLink,
-    websiteTitle: "trentwiles.com",
-    websiteUrl: "https://www.trentwiles.com",
-    linkTitle: "Downloadable Resume",
-    link: "https://github.com/trentwiles/resume/raw/refs/heads/main/trent_in_progress_resume.pdf"
-    //link: "https://trentwil.es/a/ResumeTrentWiles.pdf",
-  };
+
 
   const legacyProjects: ProjectProps[] = [
     {
@@ -169,7 +120,7 @@ function App() {
 
   return (
     <>
-      <Header {...headerData} />
+      <Header {...useHeaderData()} />
       <main id="skip-header-content" role="main">
         <Hero
           title="👋"
