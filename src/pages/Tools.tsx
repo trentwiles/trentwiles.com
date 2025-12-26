@@ -4,6 +4,7 @@ import useHeaderData from "../useHeaderData";
 import Hero from "../components/Hero";
 import Section from "../components/Section";
 import LargeButton from "../components/LargeButton";
+import { Link } from "react-router-dom";
 
 
 export default function Tools() {
@@ -24,6 +25,12 @@ export default function Tools() {
               </Section>
               <hr />
               </main>
+              <Section title="Railroad">
+                <Link to="/tools/reporting-mark-lookup">
+                  <LargeButton fontAwesomeIcon="search" text="Reporting Mark Search" key={"2"}/>
+                </Link>
+              </Section>
+              <hr />
       <Footer />
     </>
   );
