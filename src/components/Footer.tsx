@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
     return (
         <>
@@ -57,8 +59,9 @@ export default function Footer() {
                                         </a>
                                     </li>
                                     <li>
-                                        <a className="text-reset" href="https://nupd.trentwiles.com/">
-                                            <strong>NUPD Activity Map</strong>
+                                        <a className="text-reset"
+                                            href="/tools">
+                                            <strong>Tools</strong>
                                         </a>
                                     </li>
                                 </ul>
