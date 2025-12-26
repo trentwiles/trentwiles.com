@@ -2,13 +2,12 @@ import "./App.css";
 import Accordion from "./components/Accordion";
 import AccordionContainer from "./components/AccordionContainer";
 import Footer from "./components/Footer";
-import Header, { type HeaderProps } from "./components/Header";
+import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Section from "./components/Section";
 import Project, { type ProjectProps } from "./components/Project";
 import LargeButton from "./components/LargeButton";
 import WebsocketUI from "./components/WebsocketUI";
-import headerData from "./useHeaderData";
 import useHeaderData from "./useHeaderData";
 
 function App() {
