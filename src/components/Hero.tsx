@@ -1,6 +1,6 @@
 interface HeroProps {
   title: string;
-  subtitle: string;
+  subtitle: React.ReactNode;
 }
 
 export default function Hero(props: HeroProps) {

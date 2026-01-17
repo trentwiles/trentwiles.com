@@ -38,6 +38,11 @@ export default function Header(props: HeaderProps) {
                     </Link>
                   </li>
                   <li>
+                    <Link className="text-reset" to="/tools">
+                      <strong>Tools</strong>
+                    </Link>
+                  </li>
+                  <li>
                     <a className="text-reset" href={props.link}>
                       <strong>{props.linkTitle}</strong>
                     </a>
@@ -60,9 +65,9 @@ export default function Header(props: HeaderProps) {
                     style={{ textDecoration: "none" }}
                   >
                     <h1 className="display-4 text-black">Trent Wiles</h1>
-                    <p className="text-center text-muted">
-                      (pronounced "Trent Wiles")
-                    </p>
+                    {/* <p className="text-center text-muted">
+                      🤗🤗🤗
+                    </p> */}
                   </Link>
                 </div>
               </div>

@@ -31,6 +31,12 @@ export default function Tools() {
                 </Link>
               </Section>
               <hr />
+              <Section title="Transit">
+                <Link to="/tools/metro-maps">
+                  <LargeButton fontAwesomeIcon="train" text="Metro Maps" key={"2"}/>
+                </Link>
+              </Section>
+              <hr />
       <Footer />
     </>
   );

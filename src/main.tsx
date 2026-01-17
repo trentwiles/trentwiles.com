@@ -6,6 +6,7 @@ import App from './App'
 import NotFound from './pages/NotFound'
 import Tools from './pages/Tools'
 import RailroadLookup from './pages/RailroadLookup'
+import MetroMaps from './pages/MetroMaps'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -14,6 +15,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/" element={<App />} />
         <Route path="/tools" element={<Tools />} />
         <Route path="/tools/reporting-mark-lookup" element={<RailroadLookup />} />
+        <Route path="/tools/metro-maps" element={<MetroMaps />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
