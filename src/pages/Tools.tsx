@@ -27,13 +27,16 @@ export default function Tools() {
               </main>
               <Section title="Railroad">
                 <Link to="/tools/reporting-mark-lookup">
-                  <LargeButton fontAwesomeIcon="search" text="Reporting Mark Search" key={"2"}/>
+                  <LargeButton fontAwesomeIcon="search" text="Reporting Mark Search" key={"0"}/>
                 </Link>
               </Section>
               <hr />
               <Section title="Transit">
                 <Link to="/tools/metro-maps">
                   <LargeButton fontAwesomeIcon="train" text="Metro Maps" key={"2"}/>
+                </Link>
+                <Link to="/tools/mbta-commuter-rail-ridership-2018-2024">
+                  <LargeButton fontAwesomeIcon="train" text="MBTA Commuter Rail Ridership" key={"3"}/>
                 </Link>
               </Section>
               <hr />
