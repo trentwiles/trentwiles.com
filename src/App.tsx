@@ -7,7 +7,7 @@ import Hero from "./components/Hero";
 import Section from "./components/Section";
 import Project, { type ProjectProps } from "./components/Project";
 import LargeButton from "./components/LargeButton";
-import WebsocketUI from "./components/WebsocketUI";
+// import WebsocketUI from "./components/WebsocketUI";
 import useHeaderData from "./useHeaderData";
 
 function App() {
