@@ -25,7 +25,7 @@ export default function WebsocketUI() {
     console.log("Attempting WebSocket connection...");
     setStatus("connecting");
 
-    const ws = new WebSocket("ws://riverside.rocks/ws");
+    const ws = new WebSocket("wss://riverside.rocks/ws");
     wsRef.current = ws;
 
     ws.onopen = () => {
