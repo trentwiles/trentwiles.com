@@ -179,9 +179,9 @@ function App() {
         </a>
         </Section>
         <hr />
-        <Section title="Live Server Metrics (IAD)">
+        {/* <Section title="Live Server Metrics (IAD)">
           <WebsocketUI />
-        </Section>
+        </Section> */}
       </main>
       <Footer />
     </>
